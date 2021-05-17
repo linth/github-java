@@ -7,7 +7,8 @@ package game.concrete;
 
 import game.abs.Person;
 
-public class Man extends Person {
+public final class Man extends Person {
+    // 使用final class將無法讓其他class繼承下去
     
     public Man() {
 
