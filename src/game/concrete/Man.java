@@ -1,6 +1,9 @@
 package game.concrete;
 
 /**
+ * override 覆寫則是相同名稱方法/相同返回值
+ * overload
+ * 
  * Reference:
  *  - https://www.liaoxuefeng.com/wiki/1252599548343744/1260454256258656
  */
@@ -18,6 +21,7 @@ public final class Man extends Person {
         super(n, b);
     }
 
+    @Override
     public void showHello() {
         System.out.println("This is Man showHello()...");
     }
