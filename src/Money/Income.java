@@ -1,0 +1,14 @@
+package Money;
+
+public class Income {
+    protected double income;
+
+    public Income(double income) {
+        this.income = income;
+    }
+
+    public double getTax() {
+        // Polymorphic.
+        return income * 0.1;
+    }
+}
