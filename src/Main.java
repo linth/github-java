@@ -24,6 +24,7 @@ public class Main {
         Woman w = new Woman("may", 1999);
 
         p.showHello();
+        System.out.println("p: " + p.toString());
         man.showHello();
         w.showHello();
         System.out.println("name: " + man.getName() + " age: " + man.getAge());
