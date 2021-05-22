@@ -1,4 +1,4 @@
-package example;
+package example.IoCExample;
 
 /**
  * IoC concept

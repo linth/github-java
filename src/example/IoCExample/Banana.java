@@ -1,4 +1,4 @@
-package example;
+package example.IoCExample;
 
 public class Banana implements Fruit {
     @Override

@@ -1,4 +1,4 @@
-package example;
+package example.IoCExample;
 
 /**
  * service layer for getting a fruit.
