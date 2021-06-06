@@ -71,4 +71,13 @@ public class Person {
     public double getWeight() {
         return this.weight;
     }
+
+    public String toString() {
+        // add toString() since every class object has.
+        return "Person: name: " + this.name + 
+                "; age: " + this.age + 
+                "; birthday: " + this.birth + 
+                "; height: " + this.height + 
+                "; weight: " + this.weight;
+    }
 }
