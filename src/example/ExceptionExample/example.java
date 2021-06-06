@@ -1,5 +1,6 @@
 package example.ExceptionExample;
 
+import org.graalvm.compiler.nodes.extended.GetClassNode;
 
 /**
  * Error exception.
@@ -28,7 +29,6 @@ public class example {
         } finally {
             System.out.println("ending the process.");
         }
-
 
         try {
             division2(10, 0);
