@@ -1,7 +1,5 @@
 package example.ExceptionExample;
 
-import org.graalvm.compiler.nodes.extended.GetClassNode;
-
 /**
  * Error exception.
  * 
