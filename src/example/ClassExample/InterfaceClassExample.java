@@ -2,6 +2,7 @@ package example.ClassExample;
 
 public class InterfaceClassExample {
     public static void main(String[] args) {
+        // Airplane, Bird example.
         Fly bird = new Bird("angry bird"); // upcasting
         bird.flying();
         bird.getName();
@@ -9,6 +10,12 @@ public class InterfaceClassExample {
         Fly airplane = new Airplane("Boeing 747 airplane"); // upcasting
         airplane.flying();
         airplane.getName();
+
+        // Car example. (主要理解default, static, private method in the interface class.)
+        Car car = new Car("Toyota");
+        System.out.println("[Step 1] " + car.alarmOn());
+        System.out.println("[Step 2] " + car.getBrand());
+        System.out.println("[Step 3] " + car.run());
     }
 }
 
@@ -50,6 +57,11 @@ class Airplane implements Fly {
 }
 
 /**
+ * Interface class:
+ *  - 介面內 private method 存在時，可提供介面內程式碼重複使用。
+ *  - 實作的類別將無法呼叫介面內 private method。
+ *  - default method 則可以被實作類別呼叫。
+ * 
  * default 擴充interface新功能，如果不使用 default，interface不允許方法內有實作內容。
  */
 interface Vehicle {
@@ -57,6 +69,7 @@ interface Vehicle {
     String run();
 
     default String alarmOn() {
+        method1();
         return "turn on alarm.";
     }
 
@@ -66,6 +79,13 @@ interface Vehicle {
 
     static int speedUp(int speed) {
         return speed + 50;
+    }
+
+    /**
+     * 此 private method 只能被允許在介面內使用
+     */
+    private void method1() {
+        System.out.println("This is a method1 function...");
     }
 }
 
