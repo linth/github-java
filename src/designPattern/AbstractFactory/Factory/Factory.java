@@ -1,5 +1,5 @@
 package designPattern.AbstractFactory.Factory;
 
-public class AbstractFactory {
+public class Factory {
     
 }
