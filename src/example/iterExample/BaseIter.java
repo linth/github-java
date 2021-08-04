@@ -5,11 +5,14 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * 詳細請追原始碼，初步這裡講概念。 1) iterable, iterator 皆為 interface class. 2)
- * 如果一個class實現iterable interface，那就需要建立一個內部類去實現一個iterator class。 3)
- * 如果能使用跌代器iterator來歷遍就可以使用foreach 4) Map無法直接使用foreach，但List, Set可以。
+ * 詳細請追原始碼，初步這裡講概念。 
+ * 1) iterable, iterator 皆為 interface class. 
+ * 2) 如果一個class實現iterable interface，那就需要建立一個內部類去實現一個iterator class。 
+ * 3) 如果能使用跌代器iterator來歷遍就可以使用foreach 
+ * 4) Map無法直接使用foreach，但List, Set可以。
  * 
- * Reference - https://kucw.github.io/blog/2018/12/java-iterator/
+ * Reference 
+ *  - https://kucw.github.io/blog/2018/12/java-iterator/
  */
 
 // interface Iterable<T> {
