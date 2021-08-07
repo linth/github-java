@@ -19,11 +19,19 @@ enum Directions {
     public String getDirectionCode() {
         return this.shortCode;
     }
+
+    public static void printAllEnum() {
+        // provide to print all enum data in Enum class.
+        for (Directions dir : Directions.values()) {
+            System.out.println(dir);
+        }
+    }
 }
 
 public class EnumBase {
     public static void main(String[] args) {
-        printEnumAll();
+        // printEnumAll(); // using outside function to show all enum item.
+        Directions.printAllEnum();   // using function in the enum class.
 
         EnumBase eb = new EnumBase();
         eb.commonExample(Directions.EAST);
@@ -59,7 +67,11 @@ public class EnumBase {
         }
     }
 
-    // how to iterate through an Enum variable?
+    /**
+     * how to iterate through an Enum variable?
+     * 1) 在enum建立foreach function 顯示
+     * 2) 在外部建立新的function 顯示
+     */
     public static void printEnumAll() {
         for (Directions dir : Directions.values()) {
             System.out.println(dir);
