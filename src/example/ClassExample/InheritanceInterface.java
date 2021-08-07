@@ -2,16 +2,16 @@ package example.ClassExample;
 
 public class InheritanceInterface {
     public static void main(String[] args) {
-        Man man = new Man("george", 180, 75);
+        Man man = new Man("George", 180, 75);
         man.showInfo();
         man.getName();
         man.getHeight();
         man.getWeight();
 
-        Man man2 = new Man("peter", 166, 44);
-        man2.showInfo();
-        man2.getHeight();
-        man2.getWeight();
+        Women women = new Women("Mary", 166, 44);
+        women.showInfo();
+        women.getHeight();
+        women.getWeight();
     }
 }
 
@@ -25,36 +25,32 @@ interface Animal {
     String getName();
 }
 
-interface Human extends Animal {
+interface HumanCategory extends Animal {
     double getHeight();
     double getWeight(); 
 }
 
-class Man implements Human {
+abstract class Human implements HumanCategory {
     String name;
     double height;
     double weight;
 
-    Man(String name, double height, double weight) {
+    Human(String name, double height, double weight) {
         this.name = name;
         this.height = height;
         this.weight = weight;
     }
 
-    @Override
     public String getName() {
-        // 可否改成chain function, 並return this?
         System.out.println("Name: " + name);
         return name;
     }
 
-    @Override
     public double getHeight() {
         System.out.println("Height: " + height);
         return height;
     }
 
-    @Override
     public double getWeight() {
         System.out.println("Weight: " + weight);
         return weight;
@@ -65,5 +61,17 @@ class Man implements Human {
             "Name: " + this.name + 
             "; Height: " + this.height + 
             "; Weight: " + this.weight);
+    }
+}
+
+class Man extends Human {
+    Man(String name, double height, double weight) {
+        super(name, height, weight);
+    }
+}
+
+class Women extends Human {
+    Women(String name, double h, double w) {
+        super(name, h, w);
     }
 }
