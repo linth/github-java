@@ -4,6 +4,14 @@ public class InheritanceInterface {
     public static void main(String[] args) {
         Man man = new Man("george", 180, 75);
         man.showInfo();
+        man.getName();
+        man.getHeight();
+        man.getWeight();
+
+        Man man2 = new Man("peter", 166, 44);
+        man2.showInfo();
+        man2.getHeight();
+        man2.getWeight();
     }
 }
 
@@ -33,16 +41,23 @@ class Man implements Human {
         this.weight = weight;
     }
 
+    @Override
     public String getName() {
-        return this.name;
+        // 可否改成chain function, 並return this?
+        System.out.println("Name: " + name);
+        return name;
     }
 
+    @Override
     public double getHeight() {
-        return this.height;
+        System.out.println("Height: " + height);
+        return height;
     }
 
+    @Override
     public double getWeight() {
-        return this.weight;
+        System.out.println("Weight: " + weight);
+        return weight;
     }
 
     public void showInfo() {
