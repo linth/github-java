@@ -19,35 +19,35 @@ class UserInfo {
 class UserController {
     private UserService2 userService;
 
-    public List<UserInfo> queryUser() {
-        return this.queryFromDatabase();
-    }
+    // public List<UserInfo> queryUser() {
+    //     return this.queryFromDatabase();
+    // }
 
-    public List<UserInfo> queryFromXml() {
-        return userService.queryFromXml();  // xml.
-    }
+    // public List<UserInfo> queryFromXml() {
+    //     return userService.queryFromXml();  // xml.
+    // }
 
-    public List<UserInfo> queryFromDatabase() {
-        return userService.queryFromDatabase(); // DB.
-    }
+    // public List<UserInfo> queryFromDatabase() {
+    //     return userService.queryFromDatabase(); // DB.
+    // }
 
-    public List<UserInfo> queryFromJSON() {
-        return userService.queryFromJSON(); // JSON.
-    }
+    // public List<UserInfo> queryFromJSON() {
+    //     return userService.queryFromJSON(); // JSON.
+    // }
 }
 
 class UserService {
-    public List<UserInfo> queryFromXml() {
-        // search from xml.
-    }
+    // public List<UserInfo> queryFromXml() {
+    //     // search from xml.
+    // }
 
-    public List<UserInfo> queryFromDatabase() {
-        // search from DB.
-    }
+    // public List<UserInfo> queryFromDatabase() {
+    //     // search from DB.
+    // }
 
-    public List<UserInfo> queryFromJSON() {
-        // search from JSON.
-    }
+    // public List<UserInfo> queryFromJSON() {
+    //     // search from JSON.
+    // }
 }
 
 
@@ -55,34 +55,34 @@ class UserService {
  * Using the Interface class.
  */
 interface UserService2 {
-    public List<UserInfo> query();
+    // public List<UserInfo> query();
 }
 
 class UserServiceXmlImpl implements UserService2 {
-    @Override
-    public List<UserInfo> query() {
-        // from xml.
-    }
+    // @Override
+    // public List<UserInfo> query() {
+    //     // from xml.
+    // }
 }
 
 class UserServiceDatabaseImpl implements UserService2 {
-    @Override
-    public List<UserInfo> query() {
-        // from DB.
-    }
+    // @Override
+    // public List<UserInfo> query() {
+    //     // from DB.
+    // }
 }
  
 class UserServiceJSONImpl implements UserService2 {
-    @Override
-    public List<UserInfo> query() {
-        // from JSON.
-    }
+    // @Override
+    // public List<UserInfo> query() {
+    //     // from JSON.
+    // }
 }
 
 class UserController2 {
     private UserService userService;
 
-    public List<UserInfo> queryUser() {
-        return userService.query();
-    }    
+    // public List<UserInfo> queryUser() {
+    //     return userService.query();
+    // }    
 }
