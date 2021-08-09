@@ -17,7 +17,7 @@ class UserInfo {
 }
 
 class UserController {
-    private UserService userService;
+    private UserService2 userService;
 
     public List<UserInfo> queryUser() {
         return this.queryFromDatabase();
