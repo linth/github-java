@@ -50,3 +50,10 @@ class AreaCalculator {
         return shape.calculateArea();
     }
 }
+
+/**
+ * Generic Example.
+ */
+class NrConverter {
+    
+}
