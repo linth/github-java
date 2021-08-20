@@ -1,4 +1,4 @@
-package example.ExceptionExample;
+package example.EnumExample;
 
 public enum ColorLogging {
 
