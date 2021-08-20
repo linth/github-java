@@ -1,7 +1,7 @@
 package example.ExceptionExample;
 
 /**
- * 建立NrBaseException class.
+ * 建立NrBaseException class, 跟 BaseException class, NrDataException claass類似。
  * This is a basic NrBaseException class.
  * 
  */

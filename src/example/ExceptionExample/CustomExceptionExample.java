@@ -1,5 +1,8 @@
 package example.ExceptionExample;
 
+/**
+ * 定義custom exception class.
+ */
 class DefinedCustomException extends Exception {
     String s;
 

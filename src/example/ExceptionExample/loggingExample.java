@@ -2,6 +2,8 @@ package example.ExceptionExample;
 
 import java.util.logging.*;
 
+import example.EnumExample.ColorLogging;
+
 /**
  * SEVERE, WARNING, INFO, CONFIG, FINE, FINER, FINEST.
  * 
