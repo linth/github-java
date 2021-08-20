@@ -1,23 +1,23 @@
 package designPattern.AbstractFactory;
 
-
 public class AbstractFactory {
     public static void main(String[] args) {
-        
+
     }
 }
 
 /**
  * Example: GUI Factory.
  * 
- * Reference
- *  - https://refactoringguru.cn/design-patterns/abstract-factory/java/example
+ * Reference -
+ * https://refactoringguru.cn/design-patterns/abstract-factory/java/example
  */
 interface Button {
     void paint();
 }
 
 class MacOSButton implements Button {
+    // Mac 按鈕
     @Override
     public void paint() {
         System.out.println("You have created MacOSButton.");
@@ -25,6 +25,7 @@ class MacOSButton implements Button {
 }
 
 class WindowsButton implements Button {
+    // Windows 按鈕
     @Override
     public void paint() {
         System.out.println("You have created WindowsButton.");
@@ -36,6 +37,7 @@ interface Checkbox {
 }
 
 class MacOSCheckbox implements Checkbox {
+    // Mac 核取方塊
     @Override
     public void paint() {
         System.out.println("You have created MacOSCheckbox.");
@@ -43,6 +45,7 @@ class MacOSCheckbox implements Checkbox {
 }
 
 class WindowsCheckbox implements Checkbox {
+    // Windows 核取方塊
     @Override
     public void paint() {
         System.out.println("You have created WindowsCheckbox.");
@@ -51,10 +54,12 @@ class WindowsCheckbox implements Checkbox {
 
 interface GUIFactory {
     Button createButton();
+
     Checkbox createChkecbox();
 }
 
 class MacOSFactory implements GUIFactory {
+    // Mac GUI介面
     @Override
     public Button createButton() {
         return new MacOSButton();
@@ -67,6 +72,7 @@ class MacOSFactory implements GUIFactory {
 }
 
 class WindowsFactory implements GUIFactory {
+    // Windows GUI介面
     @Override
     public Button createButton() {
         return new WindowsButton();
