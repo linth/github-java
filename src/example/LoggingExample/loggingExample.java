@@ -1,4 +1,4 @@
-package example.ExceptionExample;
+package example.LoggingExample;
 
 import java.util.logging.*;
 
