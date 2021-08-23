@@ -15,6 +15,7 @@ public class loggingExample {
 
     public static void main(String[] args) {
         // ! 想一想使用 logging, color 和 exception 結合
+        // ! 思考 logging 日誌跟 system.out.println 差別
 
         // Logger logger = Logger.getGlobal();
         Logger logger = Logger.getLogger("loggingTest");
