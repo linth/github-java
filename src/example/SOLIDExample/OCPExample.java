@@ -2,7 +2,8 @@ package example.SOLIDExample;
 
 /**
  * Open Closed Principle
- * 開放封閉原則：對於擴充保持開放，但對於修改則避免。
+ *  - 開放封閉原則：對於擴充保持開放，但對於修改則避免。
+ *  - 軟體實體應該對擴展開放，對修改關閉
  * 
  * Reference:
  *  - https://www.edureka.co/blog/solid-principles-in-java/
