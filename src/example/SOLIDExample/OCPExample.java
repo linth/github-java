@@ -15,9 +15,20 @@ public class OCPExample {
         AreaCalculator areaCalculator = new AreaCalculator();
         double res = areaCalculator.calcuateShapeArea(rectangle);
         System.out.println("res: " + res);
+
+        Circle circle = new Circle(10);
+        double res2 = areaCalculator.calcuateShapeArea(circle);
+        // 使用AreaCalculator class來計算面積
+        System.out.println("res2 using areaCalculator: " + res2);
+        // 使用Circle class內部函式來計算面積
+        System.out.println("res2 using circle: " + circle.calculateArea());
     }
 }
 
+/**
+ * 使用interface class來定義，由各個class去繼承並實作內容，這樣寫法會產生許多class，方便使用者自行呼叫想要的物件。
+ * 
+ */
 interface Shape {
     public double calculateArea();
 }
@@ -40,11 +51,18 @@ class Rectangle implements Shape {
 class Circle implements Shape {
     private double radius;
 
+    Circle(double radius) {
+        this.radius = radius;
+    }
+
     public double calculateArea() {
         return 3.14 * radius * radius;
     }
 }
 
+/**
+ * 有時候許多class內部的函數，也可以抽象化出來，利用interface class來當引數帶入。
+ */
 class AreaCalculator {
     public double calcuateShapeArea(Shape shape) {
         return shape.calculateArea();
