@@ -7,6 +7,8 @@ package example.SOLIDExample;
  * 
  * Reference:
  *  - https://www.edureka.co/blog/solid-principles-in-java/
+ *  - https://ithelp.ithome.com.tw/articles/10247745
+ *  - https://reflectoring.io/open-closed-principle-explained/
  */
 public class OCPExample {
     public static void main(String[] args) {
