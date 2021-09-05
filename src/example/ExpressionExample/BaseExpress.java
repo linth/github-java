@@ -1,4 +1,4 @@
-package example.DataTypeExample.ExpressionExample;
+package example.ExpressionExample;
 
 /**
  * 運算子 operator
