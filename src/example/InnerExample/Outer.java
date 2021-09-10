@@ -23,3 +23,27 @@ public class Outer {
         
     }
 }
+
+/**
+ * FirstClass and InnerFirstClass.
+ */
+class FirstClass {
+    //! 使用 inner class 有什麼好處或作用？
+    // 可以輕鬆使用外部成員
+    public class InnerFirstClass {
+        public void callInnerFirst() {
+            System.out.println("call InnerFirst function...");
+        }
+    }
+}
+
+/**
+ * SecondClass and InnerSecondClass.
+ */
+class SecondClass {    
+    class InnerSecondClass {
+        public void callInnerSecond() {
+            System.out.println("call InnerSecond function...");
+        }
+    }
+}

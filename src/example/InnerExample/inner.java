@@ -11,5 +11,15 @@ public class inner {
         Outer outer = new Outer("Nested"); // instance an outer.
         Outer.Inner inner = outer.new Inner(); // instance an inner.
         inner.hello();
+
+        // First class.
+        FirstClass firstClass = new FirstClass();
+        FirstClass.InnerFirstClass innerFirstClass = firstClass.new InnerFirstClass();
+        innerFirstClass.callInnerFirst();
+
+        // Second class.
+        SecondClass secondClass = new SecondClass();
+        SecondClass.InnerSecondClass innerSecondClass = secondClass.new InnerSecondClass();
+        innerSecondClass.callInnerSecond();
     }
 }
