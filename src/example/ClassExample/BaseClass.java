@@ -2,6 +2,8 @@ package example.ClassExample;
 
 /**
  * 三層架構：interface class, abstract class, concrete class.
+ * 
+ * 你可以抽象化interface, abstract, or concrete class.
  */
 interface OriginInterface {
     // interface class.
@@ -10,7 +12,7 @@ interface OriginInterface {
     public void printHello();
 }
 
-abstract class Origin {
+abstract class Origin implements OriginInterface {
     // abtstact class.
     public void printHello() {
         System.out.println("Hello");
@@ -28,6 +30,9 @@ class AA extends Origin {
     }
 }
 
+/**
+ * 你可以建立新的class去繼承，不改寫父類別原有方法則。
+ */
 class BB extends AA {
     // concorete class.
     @Override
@@ -43,7 +48,7 @@ class CC extends AA {
     // concorete class.
     @Override
     public void printSelf() {
-        System.out.println("I re-define a new print self function.");
+        System.out.println("CC; I re-define a new print self function.");
     }
 
     @Override
@@ -67,5 +72,20 @@ public class BaseClass {
         CC c = new CC();
         c.printSelf();
         c.printHello();
+
+        DD d = new DD();
+        // 注意會擋非 OriginInterface & OriginInterface子類別
+        // showInfo(d); //! error!!
+        showInfo(c);
+    }
+
+    public static void showInfo(OriginInterface oi) {
+        oi.printSelf();
+    }
+}
+
+class DD {
+    public void printSelf() {
+        System.out.println("DD");
     }
 }
