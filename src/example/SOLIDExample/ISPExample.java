@@ -1,5 +1,7 @@
 package example.SOLIDExample;
 
+import java.util.logging.Logger;
+
 /**
  * 介面隔離原則 (Interface Segregation Principle)
  *  - 一個類別不應該被強迫實作一個它不需要的方法
@@ -16,11 +18,25 @@ public class ISPExample {
         // d.enableDebugMode();
         // e.enableDebugMode();
 
+        // 基本簡單寫法
         d.startEngine();
         d.greeting();
         d.closeEngine();
+
+        // function chain寫法
+        d.startEngine()
+            .greeting()
+            .closeEngine();
+
         // 最好的實作方式：介面隔離原則，額外多定義interface class.
         e.enableDebugMode();
+
+        // function chain寫法
+        e.enableDebugMode()
+            .startEngine()
+            .greeting()
+            .closeEngine();
+            
     }
 }
 
@@ -28,31 +44,37 @@ public class ISPExample {
  * 建立兩個 class: driver 和 engineer 
  */
 interface Car {
-    void startEngine();
-    void closeEngine();
-    void greeting();
-    // void enableDebugMode(); // 由 DebugMode class 去定義
+    Car startEngine();
+    Car closeEngine();
+    Car greeting();
+    // driver enableDebugMode(); // 由 DebugMode class 去定義
 }
 
 interface DebugMode {
-    void enableDebugMode();
+    DebugMode enableDebugMode();
 }
 
 class driver implements Car {
-    public void startEngine() {
-        System.out.println("啟動車子！");
+    Logger logger = Logger.getLogger("Car");
+    
+    public driver startEngine() {
+        logger.info("啟動車子！");
+        return this;
     }
 
-    public void closeEngine() {
-        System.out.println("關閉車子！");
+    public driver closeEngine() {
+        logger.info("關閉車子！");
+        return this;
     }
 
-    public void greeting() {
-        System.out.println("歡迎搭車！");
+    public driver greeting() {
+        logger.info("歡迎搭車！");
+        return this;
     }
 
-    // public void enableDebugMode() {
+    // public driver enableDebugMode() {
     //     System.out.println("錯誤，無權存取！");
+    //     logger.info("錯誤，無權存取！");
     // }
 }
 
@@ -60,20 +82,26 @@ class driver implements Car {
  * 定義完 interface class 後，由要實作的class 多重繼承後實作。
  */
 class engineer implements Car, DebugMode {
-    public void startEngine() {
-        System.out.println("啟動車子！");
+    Logger logger = Logger.getLogger("Engineer");
+
+    public engineer startEngine() {
+        logger.info("啟動車子！");
+        return this;
     }
 
-    public void closeEngine() {
-        System.out.println("關閉車子！");
+    public engineer closeEngine() {
+        logger.info("關閉車子！");
+        return this;
     }
 
-    public void greeting() {
-        System.out.println("歡迎搭車！");
+    public engineer greeting() {
+        logger.info("歡迎搭車！");
+        return this;
     }
 
-    public void enableDebugMode() {
-        System.out.println("啟動工程模式！");
+    public engineer enableDebugMode() {
+        logger.info("啟動工程模式！");
+        return this;
     }
 }
 
