@@ -1,5 +1,10 @@
 package example.ClassExample;
 
+/**
+ * 
+ * Reference
+ *  - https://matthung0807.blogspot.com/2020/04/java-abstract-class-interface-difference.html
+ */
 public class AbstractClassExample {
     public static void main(String[] args) {
         Rectangle rectangle = new Rectangle(2, 5);
