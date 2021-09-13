@@ -7,8 +7,8 @@ import example.EnumExample.ColorLogging;
 /**
  * SEVERE, WARNING, INFO, CONFIG, FINE, FINER, FINEST.
  * 
- * Reference: -
- * https://www.liaoxuefeng.com/wiki/1252599548343744/1264738568571776
+ * Reference: 
+ *  - https://www.liaoxuefeng.com/wiki/1252599548343744/1264738568571776
  */
 
 public class loggingExample {
