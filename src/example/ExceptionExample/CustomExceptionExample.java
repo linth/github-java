@@ -1,5 +1,8 @@
 package example.ExceptionExample;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  * 定義custom exception class.
  */
@@ -15,17 +18,20 @@ class DefinedCustomException extends Exception {
     }
 }
 
-public class CustomExceptionExample {
+public class CustomExceptionExample {       
     public static void main(String[] args) {
+        Logger logger = Logger.getLogger("Custom exception example.");
+        logger.setLevel(Level.INFO);
+
         try {
-            System.out.println("go into the try block...");
+            logger.info("go into the try block...");
             throw new DefinedCustomException("This is my defined exception.");
         } catch (DefinedCustomException e) {
-            System.out.println("go into the catch block...");
-            System.out.println(e + "; Error message: " + e.s);
+            logger.warning("go into the catch block...");
+            logger.warning(e + "; Error message: " + e.s);
         } catch (Exception e) {
-            System.out.println("this is exception block...");
-            System.out.println(e);
+            logger.warning("this is exception block...");
+            logger.warning(e.toString());
         }
     }
 }
