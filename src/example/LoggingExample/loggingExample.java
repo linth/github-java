@@ -6,6 +6,7 @@ import example.EnumExample.ColorLogging;
 
 /**
  * SEVERE, WARNING, INFO, CONFIG, FINE, FINER, FINEST.
+ * 開發軟體時候，盡可能使用logging去取代 "system.out.print"，確保logging顯示分隔不同level。
  * 
  * Reference: 
  *  - https://www.liaoxuefeng.com/wiki/1252599548343744/1264738568571776
