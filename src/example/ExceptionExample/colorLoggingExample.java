@@ -7,10 +7,21 @@ import java.util.logging.*;
  */
 public class colorLoggingExample {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         
-        ProcessJob pj = new ProcessJob();
-        pj.all();
+        try {
+            //! 使用串接 + logging方式，無法有效bug error追蹤。
+            ProcessJob pj = new ProcessJob();
+            pj.all();
+
+            //! 使用串接 + try-catch堆疊，可提供bug error追蹤!
+            ProcessJob pj2 = new ProcessJob();
+            pj2.all2();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new Exception("[main function 的 exception]");
+        }
     }
 }
 
@@ -63,7 +74,60 @@ class ProcessJob {
         return this;
     }
 
-    public void all() {
+    /**
+     * 使用串接方式 + 堆疊追蹤 讓debug知道錯誤在那邊，縮小trace bug範圍。
+     * 
+     * @return
+     * @throws Exception
+     */
+    public String process4() throws Exception {
+        try {
+            step1().step2().step3();
+            return "success";
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new Exception(RED + "[process4 function 的 exception]" + WHITE);
+        }
+    }
+
+    public ProcessJob step1() throws Exception {
+        try {
+            System.out.println(BLUE + "execute step1..." + WHITE);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new Exception(RED + "step 1 function 的 exception" + WHITE);
+        }
+        return this;
+    }
+
+    public ProcessJob step2() throws Exception {
+        try {
+            boolean res = true;
+            System.out.println(BLUE + "execute step2..." + WHITE);
+
+            if (res == true) {
+                throw new Exception(PURPLE + "執行時候發生錯誤!!!" + WHITE);
+            } else {
+                // pass.
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new Exception(RED + "step 2 function 的 exception" + WHITE);
+        }
+        return this;
+    }
+
+    public ProcessJob step3() throws Exception {
+        try {
+            System.out.println(BLUE + "execute step3..." + WHITE);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new Exception(RED + "step 3 function 的 exception" + WHITE);
+        }
+        return this;
+    }
+
+    public void all() throws Exception {
         // this.initLogging();
         // this.process1();
         // this.process2();
@@ -74,5 +138,14 @@ class ProcessJob {
             .process1()
             .process2()
             .process3();
+    }
+
+    public void all2() throws Exception {
+        try {
+            process4();
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new Exception(RED + "[all2 function 的 exception]" + WHITE);
+        }
     }
 }
