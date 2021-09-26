@@ -34,6 +34,15 @@ public class ArgumentMethod {
         System.out.printf("call swap_cbr(), x = %d, y = %d\n", data.x, data.y);
     }
 
+    /**
+     * Call by address.
+     * 
+     * @param args
+     */
+    public static void swap_cba(Data data) {
+        
+    }
+
     public static void main(String[] args) {
         Data d = new Data();
         int x = 10;
