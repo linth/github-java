@@ -15,7 +15,8 @@ import example.EnumExample.ColorLogging;
 public class loggingExample {
 
     public static void main(String[] args) {
-        // ! 想一想使用 logging, color 和 exception 結合
+        // ! 想一想使用 logging, color 和 exception 結合 
+        // 可以參考 ExceptionExample.colorLoggingExample
         // ! 思考 logging 日誌跟 system.out.println 差別
         // ! 思考 logging 日誌、DB、Exception之間的關係
 

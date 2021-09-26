@@ -10,6 +10,7 @@ package example.ExceptionExample;
 public class assertExample {
     public static void main(String[] args) {
         // assert example.
+        //! 增加 assert example.
         int x = -1;
 
         assert x > 0;
