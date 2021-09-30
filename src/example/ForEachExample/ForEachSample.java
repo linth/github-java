@@ -22,6 +22,9 @@ public class ForEachSample {
 
         // foreach method to iterate a stream.
         StreamExample();
+
+        // foreach order method to iterate a stream.
+        StreamForEachOrder();
     }
 
     public static void MapAndHasMapExample() {
@@ -62,8 +65,8 @@ public class ForEachSample {
 
     public static void StreamExample() {
         List<String> list = new ArrayList<String>();
-        list.add("Maggie");
         list.add("Michonne");
+        list.add("Maggie");        
         list.add("Rick");
         list.add("Merle");
         list.add("Governor");
@@ -79,5 +82,23 @@ public class ForEachSample {
         // list.stream()
         //     .filter(f -> f.startsWith("M"))
         //     .forEach(System.out::println);
+    }
+
+    public static void StreamForEachOrder() {
+        //! 需確認是否有按照順序?
+        //! parallel()?
+        List<String> list = new ArrayList<String>();
+        list.add("Michonne");
+        list.add("Maggie");        
+        list.add("Rick");
+        list.add("Merle");
+        list.add("Governor");
+
+        list.stream()
+            .filter(f -> f.startsWith("M"))
+            .parallel()
+            .forEachOrdered(n -> {
+                System.out.println(n);
+            });
     }
 }
