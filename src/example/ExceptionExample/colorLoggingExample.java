@@ -17,6 +17,8 @@ public class colorLoggingExample {
             ProcessJob pj2 = new ProcessJob();
             pj2.all2();
 
+            //! 使用 design pattern: builder方式來建置!
+
         } catch (Exception e) {
             e.printStackTrace();
             throw new Exception("[main function 的 exception]");
