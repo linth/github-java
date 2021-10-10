@@ -6,6 +6,27 @@ import java.util.Map;
 
 /**
  * HashMap, LinkedHashMap, TreeMap
+ * 
+ * 
+ *          ----------
+ *         |  Map     |   <  -  - - - - - - - -
+ *          ----------    <                    \
+ *          ＾       ＾      \                   \
+ *  extends |        |         \   implements     \   implements
+ *         /          \          \                 \
+ *        /             \implements \                \
+ *  ----------          --------     -------------   --------- 
+ * |SortedMap |        |HashMap |   |LinkedHashMap| |HashTable|
+ *  ----------          --------     -------------   --------- 
+ *     ^
+ *     | implements
+ *  ----------    
+ * |TreeMap   | 
+ *  ----------         
+ * 
+ * Reference: 
+ *  - https://www.w3spoint.com/hashmap-linkedhashmap-treemap-hashtable-java
+ *  - 
  */
 public class MapExample {
     public static void main(String[] args) {
@@ -18,6 +39,7 @@ public class MapExample {
         lhme.example();
 
         // example for TreeMap.
+        // TODO: 增加 treeMap example
     }
 }
 
