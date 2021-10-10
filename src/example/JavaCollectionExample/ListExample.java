@@ -16,6 +16,7 @@ import java.util.*;
  * |ArrayList |        |LinkedList |  
  *  ----------          -----------   
  * 
+ * 
  * Reference:
  *  - https://beginnersbook.com/2013/12/java-arraylist/
  */
@@ -43,6 +44,7 @@ public class ListExample {
         firstList.createLinkedListByList();
         firstList.createLinkedList();
         firstList.createList();
+        // TODO: ArrayList, LinkedList 各自適合使用情境
     }
 
     public void forEachArrayList(ArrayList<String> list) {
@@ -93,19 +95,14 @@ class FirstList {
     }
 
     public void createLinkedList() {
-        //! 使用 LinkedList 去實體化 LinkedList. (請注意List, LinkedList差異)
+        // ! 使用 LinkedList 去實體化 LinkedList. (請注意List, LinkedList差異)
         // ? 一開始使用linkedlist去實體化，將會有linkedlist的addFirst, addLast功能。
         LinkedList<String> linkedList = new LinkedList<String>();
-        linkedList.add("TW");
-        linkedList.add("US");
-        linkedList.add("HK");
-        linkedList.addFirst("UK");
-        linkedList.addLast("CN");
-        this.linkedList = linkedList;
-        showDataByForEach2(linkedList, "LinkedList (使用linkedlist實體化)");   
+        addData(linkedList)
+            .showDataByForEach(linkedList, "LinkedList (使用linkedlist實體化)"); // 多載方式
     }
 
-    //! 請注意spring寫法通常使用 interface class 方式，統一對接口，實體化則各自呼叫。
+    // ! 請注意spring寫法通常使用 interface class 方式，統一對接口，實體化則各自呼叫。
     public void createList() {
         List<String> list = new ArrayList<String>();
         addData(list)
@@ -120,6 +117,18 @@ class FirstList {
         return this;
     }
 
+    public FirstList addData(LinkedList<String> linkedList) {
+        // TODO: 使用多載方式之後，是否可以結合範型來處理？
+        linkedList.add("TW");
+        linkedList.add("US");
+        linkedList.add("HK");
+        linkedList.addFirst("UK");
+        linkedList.addLast("CN");
+        this.linkedList = linkedList;
+        return this;
+    }
+
+    // ! 多載方式
     public void showDataByForEach(List<?> list, String listName) {
         System.out.println("Class Type: " + list.getClass() + " " + System.identityHashCode(list));
         System.out.println("開始執行" + listName + "...");
@@ -129,7 +138,7 @@ class FirstList {
         System.out.println("結束" + listName + "...\n");
     }
 
-    public void showDataByForEach2(LinkedList<?> list, String listName) {
+    public void showDataByForEach(LinkedList<?> list, String listName) {
         System.out.println("Class Type: " + list.getClass() + " " + System.identityHashCode(list));
         System.out.println("開始執行" + listName + "...");
         // * you can use "list" to foreach them.
