@@ -40,6 +40,8 @@ public class ListExample {
         // FirstList example.
         FirstList firstList = new FirstList();
         firstList.createListArray();
+        firstList.createLinkedListByList();
+        firstList.createLinkedList();
         firstList.createList();
     }
 
@@ -75,12 +77,34 @@ public class ListExample {
 
 class FirstList {
     private List<?> list;
+    private LinkedList<?> linkedList;
 
     public void createListArray() {
         ArrayList<String> list = new ArrayList<String>();
         addData(list)
             .showDataByForEach(list, "ArrayList");
     }
+
+    public void createLinkedListByList() {
+        // 使用 List 去實體化 LinkedList.
+        List<String> list = new LinkedList<String>();
+        addData(list)
+            .showDataByForEach(list, "LinkedList");     
+    }
+
+    public void createLinkedList() {
+        //! 使用 LinkedList 去實體化 LinkedList. (請注意List, LinkedList差異)
+        // ? 一開始使用linkedlist去實體化，將會有linkedlist的addFirst, addLast功能。
+        LinkedList<String> linkedList = new LinkedList<String>();
+        linkedList.add("TW");
+        linkedList.add("US");
+        linkedList.add("HK");
+        linkedList.addFirst("UK");
+        linkedList.addLast("CN");
+        this.linkedList = linkedList;
+        showDataByForEach2(linkedList, "LinkedList (使用linkedlist實體化)");   
+    }
+
     //! 請注意spring寫法通常使用 interface class 方式，統一對接口，實體化則各自呼叫。
     public void createList() {
         List<String> list = new ArrayList<String>();
@@ -100,6 +124,16 @@ class FirstList {
         System.out.println("Class Type: " + list.getClass() + " " + System.identityHashCode(list));
         System.out.println("開始執行" + listName + "...");
         this.list.forEach(s -> {
+            System.out.println(s);
+        });
+        System.out.println("結束" + listName + "...\n");
+    }
+
+    public void showDataByForEach2(LinkedList<?> list, String listName) {
+        System.out.println("Class Type: " + list.getClass() + " " + System.identityHashCode(list));
+        System.out.println("開始執行" + listName + "...");
+        // * you can use "list" to foreach them.
+        this.linkedList.forEach(s -> {
             System.out.println(s);
         });
         System.out.println("結束" + listName + "...\n");
