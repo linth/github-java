@@ -19,6 +19,7 @@ import java.util.*;
  * 
  * Reference:
  *  - https://beginnersbook.com/2013/12/java-arraylist/
+ *  - https://ithelp.ithome.com.tw/articles/10216257
  */
 public class ListExample {
     public static void main(String[] args) {
