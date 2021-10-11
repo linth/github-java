@@ -18,8 +18,10 @@ import java.util.*;
  * 
  * 
  * Reference:
+ *  - https://beginnersbook.com/java-collections-tutorials/
  *  - https://beginnersbook.com/2013/12/java-arraylist/
  *  - https://ithelp.ithome.com.tw/articles/10216257
+ *  - https://iter01.com/550657.html
  */
 public class ListExample {
     public static void main(String[] args) {
@@ -120,6 +122,7 @@ class FirstList {
 
     public FirstList addData(LinkedList<String> linkedList) {
         // TODO: 使用多載方式之後，是否可以結合範型來處理？
+        // ? Reference: https://www.796t.com/post/NTQ5ZjI=.html
         linkedList.add("TW");
         linkedList.add("US");
         linkedList.add("HK");

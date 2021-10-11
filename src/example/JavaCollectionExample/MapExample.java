@@ -27,6 +27,7 @@ import java.util.Map;
  * Reference: 
  *  - https://www.w3spoint.com/hashmap-linkedhashmap-treemap-hashtable-java
  *  - https://beginnersbook.com/2014/06/difference-between-hashmap-and-hashtable/
+ *  - https://beginnersbook.com/java-collections-tutorials/
  */
 public class MapExample {
     public static void main(String[] args) {
