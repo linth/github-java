@@ -26,7 +26,7 @@ import java.util.Map;
  * 
  * Reference: 
  *  - https://www.w3spoint.com/hashmap-linkedhashmap-treemap-hashtable-java
- *  - 
+ *  - https://beginnersbook.com/2014/06/difference-between-hashmap-and-hashtable/
  */
 public class MapExample {
     public static void main(String[] args) {
@@ -49,6 +49,10 @@ public class MapExample {
  *  - 沒保持當初建立的順序 (order)
  *  - 每個元素皆有 key, value
  *  - 允許 null key, null value.
+ * 
+ * Reference:
+ *  - https://beginnersbook.com/2013/12/hashmap-in-java-with-example/
+ * 
  */
 class HashMapExample {
     void example() {
@@ -80,6 +84,9 @@ class HashMapExample {
  *  - 可保持當初建立的順序 (order)
  *  - 每個元素皆有 key, value
  *  - 允許 null key, null value.
+ * 
+ * Reference:
+ *  - https://beginnersbook.com/2013/12/linkedhashmap-in-java/
  */
 class LinkedHashMapExample {
     void example() {
@@ -98,6 +105,9 @@ class LinkedHashMapExample {
  *  - 皆為唯一
  *  - 由大到小排序
  *  - 不允許空的key, 但允許空的value.
+ * 
+ * Reference:
+ *  - https://beginnersbook.com/2013/12/treemap-in-java-with-example/
  */
 class TreeMapExample {
     void example() {
