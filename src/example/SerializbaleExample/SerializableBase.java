@@ -15,6 +15,7 @@ import java.io.Serializable;
  * 
  * References:
  *  - https://www.jyt0532.com/2017/09/29/implement-serializable-judiciously/
+ *  - https://matthung0807.blogspot.com/2019/01/java-serializedeserialize.html
  *  - https://www.gushiciku.cn/pl/pi5K/zh-tw
  */
 public class SerializableBase {
