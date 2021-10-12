@@ -1,5 +1,7 @@
 package example.EnumExample;
 
+import example.EnumExample.Drone.CurrentStatus;
+import example.EnumExample.Drone.SwitchStatus;
 import example.EnumExample.Pizza.PizzaStatus;
 
 /**
@@ -12,6 +14,7 @@ import example.EnumExample.Pizza.PizzaStatus;
  */
 public class CustomEnum {
     public static void main(String[] args) {
+        // pizza example.
         Pizza pizza = new Pizza();
         pizza.setStatus(PizzaStatus.ORDERED);
 
@@ -22,6 +25,18 @@ public class CustomEnum {
         } else {
             System.out.println("DELIVERED");
         }
+
+        // drone example.
+        Drone drone = new Drone();
+        drone.setSwitchStatus(SwitchStatus.ON)
+            .setCurrentStatus(CurrentStatus.IotHub)
+            .setIsMediaStreaming(true)
+            .setIsIotHub(true)
+            .setIsAiMediaStreaming(false);
+        System.out.println("CurrentStatus: " + drone.getCurrentStatus());
+        System.out.println("IsMediaStreaming: " + drone.getIsMediaStreaming());
+        System.out.println("IsIotHub: " + drone.getIsIotHub());
+        System.out.println("IsAiMediaStreaming: " + drone.getIsAiMediaStreaming());
     }
 }
 
@@ -47,5 +62,69 @@ class Pizza {
             return true;
         }
         return false;
+    }
+}
+
+class Drone {
+    private SwitchStatus switchStatus;
+    private CurrentStatus currentStatus;
+    private boolean IsMediaStreaming = false;
+    private boolean IsIotHub = false;
+    private boolean IsAiMediaStreaming = false;
+
+    public enum SwitchStatus {
+        ON,
+        OFF;
+    }
+
+    public enum CurrentStatus {
+        MediaStreaming,
+        IotHub,
+        AiMediaStreaming;
+    }
+
+    public SwitchStatus getSwitchStatus() {
+        return switchStatus;
+    }
+
+    public Drone setSwitchStatus(SwitchStatus switchStatus) {
+        this.switchStatus = switchStatus;
+        return this;
+    }
+
+    public CurrentStatus getCurrentStatus() {
+        return currentStatus;
+    }
+
+    public Drone setCurrentStatus(CurrentStatus currentStatus) {
+        this.currentStatus = currentStatus;
+        return this;
+    }
+
+    public boolean getIsMediaStreaming() {
+        return IsMediaStreaming;
+    }
+
+    public Drone setIsMediaStreaming(boolean IsMediaStreaming) {
+        this.IsMediaStreaming = IsMediaStreaming;
+        return this;
+    }
+
+    public boolean getIsIotHub() {
+        return IsIotHub;
+    }
+
+    public Drone setIsIotHub(boolean IsIotHub) {
+        this.IsIotHub = IsIotHub;
+        return this;
+    }
+
+    public boolean getIsAiMediaStreaming() {
+        return IsAiMediaStreaming;
+    }
+
+    public Drone setIsAiMediaStreaming(boolean IsAiMediaStreaming) {
+        this.IsAiMediaStreaming = IsAiMediaStreaming;
+        return this;
     }
 }
