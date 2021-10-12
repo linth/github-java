@@ -11,6 +11,7 @@ import java.util.Queue;
  * 
  * Reference:
  *  - https://beginnersbook.com/2017/08/queue-interface-in-java-collections/
+ *  - https://beginnersbook.com/java-collections-tutorials/
  */
 public class QueueExample {   
     public static void main(String[] args) {

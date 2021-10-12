@@ -2,6 +2,14 @@ package example.MethodExample;
 
 /**
  * The Call by Value and Call by Referene example.
+ * 
+ * 若是傳遞某個 object 給 method 時，objects 是以 call by reference 方式來傳遞。
+ * 
+ * Reference:
+ *  - http://brownydev.blogspot.com/2011/06/java-call-by-value-call-by-reference.html
+ *  - https://sites.google.com/site/dychen1127/developer-java/java-call-by-reference
+ *  - https://sites.google.com/site/dychen1127/developer-java/java-call-by-value
+ *  - https://wayne265265.pixnet.net/blog/post/112556555-%E3%80%90%E6%95%99%E5%AD%B8%E3%80%91call-by-value%2C-call-by-address%2C-call-by-referenc
  */
 class Data {
     int x; 
