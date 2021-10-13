@@ -9,6 +9,9 @@ import java.io.Serializable;
 /**
  * 序列化/反序列化
  * 
+ * 序列化：把 object 轉成 byte 過程
+ * 反序列化：把 byte 恢復成 object 過程
+ * 
  * 常使用的API
  *  - java.io.ObjectOutputStream
  *  - java.io.ObjectInputStream
@@ -18,7 +21,7 @@ import java.io.Serializable;
  * Reference
  *  - https://www.gushiciku.cn/pl/pi5K/zh-tw
  */
-public class SerializbaleExample {
+public class SerializableExample {
     public static void main(String[] args) {
         
     }
