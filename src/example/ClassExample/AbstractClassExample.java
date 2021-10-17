@@ -1,6 +1,7 @@
 package example.ClassExample;
 
 /**
+ * abstract class 範例
  * 
  * Reference
  *  - https://matthung0807.blogspot.com/2020/04/java-abstract-class-interface-difference.html
@@ -11,27 +12,41 @@ public class AbstractClassExample {
         Circle circle = new Circle(3);
 
         //! abstract class不能被實體化
-        // Shape shape = new Shape(); 
+        // Shape shape = new Shape();
 
         System.out.println("Area of rectangle: " + rectangle.area());
         System.out.println("Area of circle: " + circle.area());
 
         rectangle.draw();
         circle.draw();
+
+        rectangle.printClassName();
+        circle.printClassName();
     }
+}
+
+/**
+ * interface Figure
+ */
+interface Figure {
+    public abstract void draw();
+    public abstract double area();
+    public void printClassName();
 }
 
 /**
  * Abstract class
  */
-abstract class Shape {
+abstract class Shape implements Figure {
     // public double area() {
     //     return 0;
     // };
 
     // abstract method 抽象方法
-    public abstract void draw();
-    public abstract double area();
+    @Override
+    public void printClassName() {
+        System.out.println("Shape class.");
+    }
 }
 
 /**
@@ -45,13 +60,20 @@ class Rectangle extends Shape {
         this.height = h;
         this.width = w;
     }
-
+    
+    @Override
     public double area() {
         return height * width;
     }
 
+    @Override
     public void draw() {
         System.out.println("The rectangle is drawing.");
+    }
+
+    @Override
+    public void printClassName() {
+        System.out.println("Rectangle class");
     }
 }
 
@@ -62,11 +84,18 @@ class Circle extends Shape {
         this.r = r;
     }
 
+    @Override
     public double area() {
         return Math.PI * r * r;
     }
 
+    @Override
     public void draw() {
         System.out.println("The circle is drawing.");
+    }
+
+    @Override
+    public void printClassName() {
+        System.out.println("Circle class.");
     }
 }
