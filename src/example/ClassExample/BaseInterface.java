@@ -3,6 +3,8 @@ package example.ClassExample;
 import java.util.logging.Logger;
 
 /**
+ * interface class 範例
+ * 
  * Java不支援多重繼承，但是interface是可以使用多重繼承概念。
  * 
  */
@@ -11,6 +13,7 @@ public class BaseInterface {
         BirdFly birdFly = new BirdFly();
         birdFly.seagullFly();
         birdFly.sparrowFly();
+        birdFly.eat();
     }
 }
 
@@ -28,10 +31,12 @@ public class BaseInterface {
  */
 interface Seagull {
     void seagullFly();
+    void eat();
 }
 
 interface Sparrow {
     void sparrowFly();
+    void eat();
 }
 
 class BirdFly implements Seagull, Sparrow {
@@ -43,6 +48,11 @@ class BirdFly implements Seagull, Sparrow {
 
     public void sparrowFly() {
         logger.info("sparrow fly...");
+    }
+
+    public void eat() {
+        // interface 命名方法相同一樣可以，不影響實作部分。
+        logger.info("BirdFly eat...");
     }
 }
 
@@ -81,6 +91,10 @@ class FinalFly implements AnimalFly {
 
     public void animalFly() {
         logger.info("animal fly...");
+    }
+
+    public void eat() {
+        logger.info("FinalFly eat...");
     }
 }
 

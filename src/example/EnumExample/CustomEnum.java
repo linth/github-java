@@ -66,6 +66,7 @@ class Pizza {
 }
 
 class Drone {
+    // ! class + enum example.
     private SwitchStatus switchStatus;
     private CurrentStatus currentStatus;
     private boolean IsMediaStreaming = false;

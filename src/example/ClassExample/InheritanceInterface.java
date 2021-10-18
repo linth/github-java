@@ -25,12 +25,13 @@ interface Animal {
     String getName();
 }
 
-interface HumanCategory extends Animal {
+interface HumanCategory {
     double getHeight();
     double getWeight(); 
 }
 
-abstract class Human implements HumanCategory {
+abstract class Human implements HumanCategory, Animal {
+    // ! 修改成多重繼承方式
     String name;
     double height;
     double weight;
