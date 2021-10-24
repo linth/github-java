@@ -6,6 +6,9 @@ package example.ClassExample;
  * TODO: add private, protected
  * 
  * 你可以抽象化interface, abstract, or concrete class.
+ * 
+ * References:
+ *  - https://pdai.tech/md/java/basic/java-basic-oop.html
  */
 interface OriginInterface {
     // interface class.
