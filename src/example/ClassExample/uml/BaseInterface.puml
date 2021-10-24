@@ -1,0 +1,38 @@
+@startuml
+
+
+interface Seagull {
+    +void seagullFly();
+    +void eat();
+}
+
+interface Sparrow {
+    +void sparrowFly();
+    +void eat();
+}
+
+' java interface 可以多重繼承，但 class 無法
+interface AnimalFly {
+    +void animalFly();
+}
+
+class BirdFly {
+    +void seagullFly();
+    +void sparrowFly();
+    +void eat();
+}
+
+class FinalFly {
+    +void animalFly();
+    +void seagullFly();
+    +void sparrowFly();
+    +void eat();
+}
+
+Seagull <|.. BirdFly
+Sparrow <|.. BirdFly
+
+Seagull <|-- AnimalFly
+Sparrow <|-- AnimalFly
+AnimalFly <|.. FinalFly
+@enduml
