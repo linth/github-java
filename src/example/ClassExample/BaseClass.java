@@ -3,7 +3,12 @@ package example.ClassExample;
 /**
  * 三層架構：interface class, abstract class, concrete class.
  * 
+ * TODO: add private, protected
+ * 
  * 你可以抽象化interface, abstract, or concrete class.
+ * 
+ * References:
+ *  - https://pdai.tech/md/java/basic/java-basic-oop.html
  */
 interface OriginInterface {
     // interface class.
@@ -15,8 +20,16 @@ interface OriginInterface {
 abstract class Origin implements OriginInterface {
     // abtstact class.
     public void printHello() {
-        System.out.println("Hello");
+        System.out.println("Hello by Origin.");
     }
+}
+
+class HH extends Origin {
+    public void printSelf() {
+        System.out.println("HH");
+    }
+
+    // ! HH 的 printHello() 已繼承了 Origin
 }
 
 class AA extends Origin {
@@ -25,8 +38,9 @@ class AA extends Origin {
         System.out.println("AA");
     }
 
+    @Override
     public void printHello() {
-        System.out.println("Hello");
+        System.out.println("Hello by AA.");
     }
 }
 
@@ -39,6 +53,8 @@ class BB extends AA {
     public void printSelf() {
         System.out.println("BB");
     }
+
+    // ! BB 的 printHello() 已繼承了 AA
 }
 
 /**
@@ -48,12 +64,12 @@ class CC extends AA {
     // concorete class.
     @Override
     public void printSelf() {
-        System.out.println("CC; I re-define a new print self function.");
+        System.out.println("CC");
     }
 
     @Override
     public void printHello() {
-        System.out.println("I re-define a new print hello function.");
+        System.out.println("Hello by CC.");
     }
 }
 
@@ -77,9 +93,16 @@ public class BaseClass {
         // 注意會擋非 OriginInterface & OriginInterface子類別
         // showInfo(d); //! error!!
         showInfo(c);
+
+        HH h = new HH();
+        h.printSelf();
+        h.printHello();
+
+        showInfo(h);
     }
 
     public static void showInfo(OriginInterface oi) {
+        // ! 統一開啟一個 function: get printSelf() 值
         oi.printSelf();
     }
 }
