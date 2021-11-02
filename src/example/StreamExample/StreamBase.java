@@ -3,6 +3,7 @@ package example.StreamExample;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Stream;
 
 /**
  * Reference
@@ -14,14 +15,23 @@ public class StreamBase {
         List<Integer> num = Arrays.asList(1, 2, 1, 3, 3, 2, 4);
 
         findJChangeBig(list);
-        dealWithStream(list);
 
-        StreamTask streamTask = new StreamTask();
-        streamTask.filterShapAndShow(list);
-        streamTask.distinctEven(num);
+        List<String> res = dealWithStream(list);
+        res.forEach(s -> {
+            System.out.println(s);
+        });
+        
+        List<String> res2 = changeUpperCase(res);
+        res2.forEach(s2 -> {
+            System.out.println(s2);
+        });
+
+        // StreamTask streamTask = new StreamTask();
+        // streamTask.filterShapAndShow(list);
+        // streamTask.distinctEven(num);
     }
 
-    // 傳統作法使用for-loop一個一個處理
+    // ! 傳統作法使用for-loop一個一個處理
     public static void findJChangeBig(List<String> list) {
         List<String> filterList = new ArrayList<>();
 
@@ -36,12 +46,32 @@ public class StreamBase {
         }
     }
 
-    // 使用stream來解決問題
-    public static void dealWithStream(List<String> list) {
+    // ! 使用stream來解決問題
+    public static List<String> dealWithStream(List<String> list) {
+        List<String> res = new ArrayList<>();
         list.stream()
-            .filter(s -> s.startsWith("J"))
+            .filter(s -> s.startsWith("J"));
+            // .map(String::toUpperCase)
+            // .forEach(System.out::println);
+        return res;
+    }
+
+    public static List<String> changeUpperCase(List<String> list) {
+        // ? 可以思考使用 Stream<String> 方式處理
+        List<String> res = new ArrayList<>();
+        list.stream()
             .map(String::toUpperCase)
-            .forEach(System.out::println);
+            .forEach(res::add);
+        return res;
+    }
+
+    public static List<String> changeLowerCase(List<String> list) {
+        // ? 可以思考使用 Stream<String> 方式處理
+        List<String> res = new ArrayList<>();
+        list.stream()
+            .map(String::toLowerCase)
+            .forEach(res::add);
+        return res;
     }
 }
 
