@@ -16,7 +16,6 @@ class Drone2 {
     public void setDeviceName(String deviceName) { this.deviceName = deviceName; }
     public void setDeviceMode(String deviceMode) { this.deviceMode = deviceMode; }
 
-    // public void setDroneStatus() {}
 }
 
 class DroneStatus {
