@@ -1,6 +1,7 @@
 package example.iterExample;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
@@ -13,6 +14,7 @@ import java.util.List;
  * 
  * Reference 
  *  - https://kucw.github.io/blog/2018/12/java-iterator/
+ *  - https://www.baeldung.com/java-iterable-to-collection
  */
 
 // interface Iterable<T> {
@@ -50,5 +52,37 @@ public class BaseIter {
         }
 
         // 實際上會被編譯成使用iterator去歷遍。
+
+        iterableExample();
+    }
+
+    /**
+     * In this tutorial, we explore different ways to convert an iterable a collection in Java.
+     */
+    public static void iterableExample() {
+        // ! 請注意 iterable 和 iterator 差異!!
+
+        // define our Iterable.
+        Iterable<String> iterable = Arrays.asList("john", "tom", "jane");
+
+        // define a simple Iterator.
+        Iterator<String> iterator = iterable.iterator();
+
+        System.out.println("使用 iterable 歷遍: ");
+        iterable.forEach(s -> { System.out.println(s); });
+        System.out.println("使用 iterator 歷遍: ");
+        iterator.forEachRemaining(s -> { System.out.println(s); });
+    }
+
+    public static void iterableGenericExample() {
+        // TODO: 可以試試看使用 generic method
+        Iterable<String> iterable = Arrays.asList("john", "tom", "jane");
+    }
+
+    public void testIterableConvertToList() {
+        List<String> list = new ArrayList<>();
+        Iterable<String> iterable = Arrays.asList("john", "tom", "jane");
+
+        iterable.forEach(list::add);
     }
 }
