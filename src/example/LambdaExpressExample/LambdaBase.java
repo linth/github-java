@@ -6,8 +6,13 @@ import java.util.ArrayList;
 /**
  * Lambda 表達式
  * 
- * Reference - https://mrbird.cc/java8lambda1.html -
+ * 
+ * 
+ * 
+ * Reference 
+ *  - https://mrbird.cc/java8lambda1.html -
  * https://pdai.tech/md/java/java8/java8-stream.html
+ *  - https://blog.tonycube.com/2015/10/java-java8-2-lambda-expression.html
  */
 public class LambdaBase {
     public static void main(String[] args) {
