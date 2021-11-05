@@ -3,11 +3,16 @@ package example.StreamExample;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
+ * Stream 範例
+ * 
+ * 
  * Reference
  *  - https://mrbird.cc/java8stream1.html
+ *  - https://blog.tonycube.com/2015/10/java-java8-3-stream.html
  */
 public class StreamBase {
     public static void main(String[] args) {
@@ -29,6 +34,8 @@ public class StreamBase {
         // StreamTask streamTask = new StreamTask();
         // streamTask.filterShapAndShow(list);
         // streamTask.distinctEven(num);
+
+        useCollect();
     }
 
     // ! 傳統作法使用for-loop一個一個處理
@@ -72,6 +79,57 @@ public class StreamBase {
             .map(String::toLowerCase)
             .forEach(res::add);
         return res;
+    }
+
+    public static void useCollect() {
+        // use collect.
+        List<String> names = Stream.of("Tom", "Tony", "John").collect(Collectors.toList());
+        System.out.println("names: " + names.toString() + "; " + names.getClass().getTypeName());
+
+        List<String> names2 = Arrays.asList("Tom", "Tony", "John");
+        System.out.println("names2 " + names2 + "; " + names2.getClass());
+    }
+
+    public static void useCollectJoining() {
+        // TODO: use collect joining.
+        // https://blog.tonycube.com/2015/10/java-java8-3-stream.html
+    }
+
+    public void useMap() {
+        // TODO: use map.
+        // 使用時機: 資料的轉換。當你有一個方法(method)它的用途會將某個輸入資料轉換成另一個資料輸出時，map 可以讓你使用這個方法。 
+        // 輸入輸出：T -> R
+    }
+
+    public void useFilter() {
+        // TODO: use filter.
+    }
+
+    public void useFlatMap() {
+        // TODO: use flatMap.
+    }
+
+    public void useCount() {
+        // TODO: use count.
+    }
+
+    public void useMaxMin() {
+        // TODO: use Max and Min.
+    }
+
+    public void useSorted() {
+        // TODO: use sorted.
+    }
+
+    public void useSequential() {
+        // TODO: use sequential.
+        // https://blog.tonycube.com/2015/10/java-java8-3-stream.html
+        // ! 可以比較 sequential 和 parallel 差異。
+    }
+
+    public void useParallel() {
+        // TODO: use parallel.
+        // https://blog.tonycube.com/2015/10/java-java8-3-stream.html
     }
 }
 

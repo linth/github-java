@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 /**
  * Reference
  *  - https://mrbird.cc/java8stream2.html
+ *  - https://blog.tonycube.com/2015/10/java-java8-3-stream.html
  */
 public class StreamCollect {
     public static void main(String[] args) {
