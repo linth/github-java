@@ -9,8 +9,9 @@ public class AbstractFactory {
 /**
  * Example: GUI Factory.
  * 
- * Reference -
- * https://refactoringguru.cn/design-patterns/abstract-factory/java/example
+ * Reference 
+ *  - https://refactoringguru.cn/design-patterns/abstract-factory/java/example
+ *  - https://nwpie.blogspot.com/2017/05/3-class-interface-abstract.html
  */
 interface Button {
     void paint();
