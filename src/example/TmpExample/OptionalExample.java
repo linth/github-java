@@ -30,6 +30,7 @@ public class OptionalExample {
         o.nameNullable();
         o.nameIsPresent(null);
         o.nameIsPresent("GG");
+        o.useEmpty();
     }
 
     public void nameNotNull() {
@@ -59,7 +60,9 @@ public class OptionalExample {
     }
 
     public void useEmpty() {
-        // TODO: check empty case.
+        String name = null;
+        Optional<String> optName = (name == null) ? Optional.empty() : Optional.of(name);
+        System.out.println(optName); // optName.get() 因為null, 所以無法抓取到值會有錯誤。
     }
 
     public void useOrElse() {
