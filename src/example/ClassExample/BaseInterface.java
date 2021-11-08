@@ -7,6 +7,8 @@ import java.util.logging.Logger;
  * 
  * Java不支援多重繼承，但是interface是可以使用多重繼承概念。
  * 
+ * ! 兩物件即使介面完全一樣, 也可能會有完全不同的實作。
+ * 
  */
 public class BaseInterface {
     public static void main(String[] args) {

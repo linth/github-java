@@ -31,10 +31,12 @@ class Bird implements Fly {
         this.name = name;
     }
 
+    @Override
     public void getName() {
         System.out.println("I am a " + name + ".");
     }
 
+    @Override
     public void flying() {
         System.out.println("Bird is flying...");
     }
@@ -57,7 +59,7 @@ class Airplane implements Fly {
 }
 
 /**
- * Interface class:
+ * Interface class 規則與範例
  *  - 介面內 private method 存在時，可提供介面內程式碼重複使用。
  *  - 實作的類別將無法呼叫介面內 private method。
  *  - default method 則可以被實作類別呼叫。
@@ -85,7 +87,18 @@ interface Vehicle {
      * 此 private method 只能被允許在介面內使用
      */
     private void method1() {
+        method3();
         System.out.println("This is a method1 function...");
+
+    }
+
+    private void method2() {
+        System.out.println("This is a method2 function...");
+    }
+
+    private void method3() {
+        System.out.println("This is a method3 function...");
+        method2();
     }
 }
 
@@ -96,10 +109,12 @@ class Car implements Vehicle {
         this.brand = brand;
     }
 
+    @Override
     public String getBrand() {
         return brand;
     }
 
+    @Override
     public String run() {
         return "driving car safely.";
     }

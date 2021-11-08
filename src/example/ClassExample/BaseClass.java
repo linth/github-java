@@ -1,6 +1,12 @@
 package example.ClassExample;
 
 /**
+ * Class 和 Object 物件
+ * 
+ * 訊息是唯一可令物件執行操作的管道, 操作則是唯一可改變物件內部狀態的管道。
+ * 有了這些限制, 物件內部狀態可說是被妥為封裝了起來 (encapsulation) : 
+ * 無法接觸及, 無法自外界窺伺。
+ * 
  * 三層架構：interface class, abstract class, concrete class.
  * 
  * TODO: add private, protected
@@ -9,6 +15,7 @@ package example.ClassExample;
  * 
  * References:
  *  - https://pdai.tech/md/java/basic/java-basic-oop.html
+ *  - https://nwpie.blogspot.com/2017/05/3-class-interface-abstract.html
  */
 interface OriginInterface {
     // interface class.
