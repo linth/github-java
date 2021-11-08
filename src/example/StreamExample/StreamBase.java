@@ -13,6 +13,7 @@ import java.util.stream.Stream;
  * Reference
  *  - https://mrbird.cc/java8stream1.html
  *  - https://blog.tonycube.com/2015/10/java-java8-3-stream.html
+ *  - https://www.runoob.com/java/java8-streams.html
  */
 public class StreamBase {
     public static void main(String[] args) {
@@ -36,6 +37,8 @@ public class StreamBase {
         // streamTask.distinctEven(num);
 
         useCollect();
+        useCollectJoining();
+        useMap();
     }
 
     // ! 傳統作法使用for-loop一個一個處理
@@ -83,7 +86,8 @@ public class StreamBase {
 
     public static void useCollect() {
         // use collect.
-        List<String> names = Stream.of("Tom", "Tony", "John").collect(Collectors.toList());
+        List<String> names = Stream.of("Tom", "Tony", "John")
+            .collect(Collectors.toList());
         System.out.println("names: " + names.toString() + "; " + names.getClass().getTypeName());
 
         List<String> names2 = Arrays.asList("Tom", "Tony", "John");
@@ -91,14 +95,28 @@ public class StreamBase {
     }
 
     public static void useCollectJoining() {
-        // TODO: use collect joining.
         // https://blog.tonycube.com/2015/10/java-java8-3-stream.html
+        List<String> names = Arrays.asList("Tom", "Tony", "John");
+
+        String result = names.stream()
+            .map(n -> n + n)
+            .collect(Collectors.joining(",", "[", "]"));
+
+        System.out.println(result); // [TomTom,TonyTony,JohnJohn]
     }
 
-    public void useMap() {
+    public static void useMap() {
         // TODO: use map.
         // 使用時機: 資料的轉換。當你有一個方法(method)它的用途會將某個輸入資料轉換成另一個資料輸出時，map 可以讓你使用這個方法。 
         // 輸入輸出：T -> R
+        List<Integer> ages = Stream.of(11, 2, 40, 37, 100, 27)
+            .collect(Collectors.toList());
+        
+        // ! 注意 integer convert to string. 
+        String result = (String) ages.stream()
+            .map(a -> String.valueOf(a+10))
+            .collect(Collectors.joining(",", "[", "]"));
+        System.out.println(result);
     }
 
     public void useFilter() {
