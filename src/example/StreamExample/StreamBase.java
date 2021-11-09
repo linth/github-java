@@ -36,9 +36,13 @@ public class StreamBase {
         // streamTask.filterShapAndShow(list);
         // streamTask.distinctEven(num);
 
+        System.out.println(changeLowerCase(list));
+        System.out.println("--------------");
+
         useCollect();
         useCollectJoining();
         useMap();
+        useFilter();
     }
 
     // ! 傳統作法使用for-loop一個一個處理
@@ -119,8 +123,29 @@ public class StreamBase {
         System.out.println(result);
     }
 
-    public void useFilter() {
-        // TODO: use filter.
+    public static void useFilter() {
+        // ! great handle data style.
+        List<String> names = Arrays.asList("Tom", "Tony", "John", "George", "May", "Peter", "GG");
+
+        // * 範例1.
+        List<String> result = names.stream()
+            .filter(name -> name.startsWith("G"))
+            .collect(Collectors.toList());
+        System.out.println(result);
+
+        // * 範例2.
+        List<String> result2 = names.stream()
+            .filter(n -> n.contains("Tom"))
+            .collect(Collectors.toList());        
+        System.out.println(result2);
+
+        // * 範例3.
+        List<String> result3 = names.stream()
+            .filter(n -> !"George".equals(n))
+            .collect(Collectors.toList());        
+        System.out.println(result3);
+
+        // ? [Think] how to filter through a JSON document using Java 8 Stream API?
     }
 
     public void useFlatMap() {
