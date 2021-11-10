@@ -7,6 +7,9 @@ import java.util.Scanner;
  *  - syntax error
  *  - semantic error
  *  - runtime error
+ * 
+ * Reference:
+ *  - https://www.gushiciku.cn/pl/aawb/zh-tw
  */
 public class SimpleExceptionExample {
     public static void main(String[] args) {
