@@ -12,9 +12,12 @@ import java.util.List;
  * 3) 如果能使用跌代器iterator來歷遍就可以使用foreach 
  * 4) Map無法直接使用foreach，但List, Set可以。
  * 
+ * TODO: 增加 forEachRemaining 範例
+ * 
  * Reference 
  *  - https://kucw.github.io/blog/2018/12/java-iterator/
  *  - https://www.baeldung.com/java-iterable-to-collection
+ *  - https://www.gushiciku.cn/pl/g25m/zh-tw
  */
 
 // interface Iterable<T> {
