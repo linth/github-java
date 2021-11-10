@@ -1,7 +1,9 @@
-package example.TmpExample;
+package example.UtilExample;
 
 /**
  * ValueOf() 方法
+ * 
+ * ! 注意 indexOf(), valueOf() 差異。
  * 
  * Reference:
  *  - https://www.runoob.com/java/java-string-valueof.html

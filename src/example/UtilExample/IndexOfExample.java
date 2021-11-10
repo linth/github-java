@@ -1,12 +1,15 @@
 package example.UtilExample;
 
 /**
- * String indexOf example.
+ * indexOf 範例
+ * 
+ * ! 注意 indexOf() 和 valueOf() 差異。
  * 
  * Reference:
  *  - https://www.runoob.com/java/java-string-indexof.html
+ *  - http://tw.gitbook.net/java/java_string_indexof.html
  */
-public class StringIndexOfExample {
+public class IndexOfExample {
     public static void main(String[] args) {
         findString();
     }
