@@ -2,6 +2,7 @@ package example.UtilExample;
 
 /**
  * indexOf 範例
+ *  - 找某個值的index
  * 
  * ! 注意 indexOf() 和 valueOf() 差異。
  * 
@@ -12,6 +13,7 @@ package example.UtilExample;
 public class IndexOfExample {
     public static void main(String[] args) {
         findString();
+        findString2();
     }
 
     public static void findString() {
@@ -20,11 +22,12 @@ public class IndexOfExample {
         System.out.println(string.indexOf("b")); // -1 不存在
         System.out.println(string.indexOf("a")); // 0
         System.out.println(string.indexOf("a", 3)); // 6
-
-        // TODO: need to check.
-        String string2 = "a-97,b-98,c-99";
-        System.out.println(string.indexOf(99)); // 7
-        System.out.println(string.indexOf("c")); // 7
     }
 
+    public static void findString2() {
+        String string = "a-97,b-98,c-99";
+        System.out.println(string.indexOf(99)); // 10
+        System.out.println(string.indexOf("c")); // 10
+        System.out.println(string.indexOf(",b")); // 7
+    }
 }
