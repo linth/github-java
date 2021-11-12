@@ -29,8 +29,11 @@ public class OptionalExample {
         o.nameNotNull();
         o.nameNullable();
         o.nameIsPresent(null);
+        o.nameIsPresent("George");
         o.nameIsPresent("GG");
         o.useEmpty();
+        o.useOrElse();
+        o.useOrElseThrow();
     }
 
     public void nameNotNull() {
@@ -61,26 +64,37 @@ public class OptionalExample {
 
     public void useEmpty() {
         String name = null;
+        // 使用三元運算子
         Optional<String> optName = (name == null) ? Optional.empty() : Optional.of(name);
+
         System.out.println(optName); // optName.get() 因為null, 所以無法抓取到值會有錯誤。
     }
 
     public void useOrElse() {
-        // TODO: reduce if statement.
+        // ! 取代 if
+        String name = null; 
+        Optional<String> optName = Optional.ofNullable(name);
+        
+        System.out.println(optName.orElse("Name is null."));
     }
 
     public void useOrElseGet() {
+        String name = null;
+        Optional<String> optName = Optional.ofNullable(name);
 
+        // ! 可透過 orElseGet，讓null值時多做一些事情
+        System.out.println(optName.orElseGet( () -> "what!!! null !!" )); // lambda.
     }
 
     public void useOrElseThrow() {
+        // ! 可透過null值，跳出exception處理
+        String name = null;
+        Optional<String> optName = Optional.ofNullable(name);
 
+        try {
+            System.out.println(optName.orElseThrow( () -> new Exception("what the hell.") ));
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
-
-    // public Integer sum(Optional<Integer> first, Optional<Integer> second) {
-    //     if (first.isPresent() && second.isPresent()) {
-    //         return first.get() + second.get();
-    //     }
-    //     return null;
-    // }
 }
