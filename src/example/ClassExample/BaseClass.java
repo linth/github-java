@@ -9,7 +9,8 @@ package example.ClassExample;
  * 
  * 三層架構：interface class, abstract class, concrete class.
  * 
- * TODO: add private, protected
+ * TODO: add private, protected.
+ * TODO: use super().
  * 
  * 你可以抽象化interface, abstract, or concrete class.
  * 
@@ -19,9 +20,15 @@ package example.ClassExample;
  */
 interface OriginInterface {
     // interface class.
+    static String name = "OriginInterface";
+
     public void printSelf();
 
     public void printHello();
+
+    private void printName() {
+        System.out.println("name: " + name);
+    }
 }
 
 abstract class Origin implements OriginInterface {
@@ -32,6 +39,9 @@ abstract class Origin implements OriginInterface {
 }
 
 class HH extends Origin {
+    // concorete class.
+
+    @Override
     public void printSelf() {
         System.out.println("HH");
     }
@@ -41,6 +51,8 @@ class HH extends Origin {
 
 class AA extends Origin {
     // concorete class.
+
+    @Override
     public void printSelf() {
         System.out.println("AA");
     }
@@ -56,6 +68,7 @@ class AA extends Origin {
  */
 class BB extends AA {
     // concorete class.
+    
     @Override
     public void printSelf() {
         System.out.println("BB");
