@@ -4,6 +4,7 @@ import java.util.Optional;
 
 /**
  * Optional 範例
+ *  - Optional觀念: 主要使用Optional取代null
  * 
  * Optional 物件
  *  - of()：接受非 null 的值並回傳 Optional 物件。
