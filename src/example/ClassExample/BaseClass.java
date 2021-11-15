@@ -7,7 +7,6 @@ package example.ClassExample;
  * 有了這些限制, 物件內部狀態可說是被妥為封裝了起來 (encapsulation) : 
  * 無法接觸及, 無法自外界窺伺。
  * 
- * 三層架構：interface class, abstract class, concrete class.
  * 
  * TODO: add private, protected.
  * TODO: use super().

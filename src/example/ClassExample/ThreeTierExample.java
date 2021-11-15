@@ -1,5 +1,11 @@
 package example.ClassExample;
 
+/**
+ *  三層架構：interface class, abstract class, concrete class.
+ * 
+ * ! interface/abstract class 皆不能實體化
+ * 
+ */
 public class ThreeTierExample {
     public static void main(String[] args) {
         ConcreteConvert cc = new ConcreteConvert("george", 178, 75);
@@ -13,7 +19,11 @@ public class ThreeTierExample {
 }
 
 interface Orgin {
-    //! 介面變數必須要有初始值
+    /**
+     * 1. interface class 不能實體化
+     * !2. 介面變數必須要有初始值
+     * 3. interface class 可多重繼承 interface class.
+     */
     // String sex = "";
 }
 
@@ -22,6 +32,11 @@ interface InterfaceConvert extends Orgin {
 }
 
 abstract class AbstractConvert implements InterfaceConvert {
+    /**
+     * 1. abstract class 算是部分可以定義或實作的class。
+     * !2. abstract class 也不能實體化
+     * 3. abstract class 也不可以多重繼承
+     */
     public String name;
     public double height;
     public double weight;
