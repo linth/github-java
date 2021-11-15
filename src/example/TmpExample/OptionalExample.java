@@ -38,12 +38,14 @@ public class OptionalExample {
     }
 
     public void nameNotNull() {
+        // ! of() 不能塞 null
         String name = "GEORGE";
         Optional<String> optName = Optional.of(name);
         System.out.println(optName.get());
     }
 
     public void nameNullable() {
+        // ! ofNullable() 可以塞 null
         String name = null;
         // Optional<String> optName = Optional.of(name); // 使用of會有錯誤
         Optional<String> optName = Optional.ofNullable(name);
@@ -53,6 +55,7 @@ public class OptionalExample {
     }
 
     public void nameIsPresent(String n) {
+        // ! isPresent() 可拿來判斷是否有此物件存在
         String name = n;
         Optional<String> optName = Optional.ofNullable(name);
 
@@ -65,14 +68,15 @@ public class OptionalExample {
 
     public void useEmpty() {
         String name = null;
-        // 使用三元運算子
+        // ! 使用三元運算子 + optional object
         Optional<String> optName = (name == null) ? Optional.empty() : Optional.of(name);
 
         System.out.println(optName); // optName.get() 因為null, 所以無法抓取到值會有錯誤。
     }
 
     public void useOrElse() {
-        // ! 取代 if
+        // 取代 if
+        // ! orElse() 處理 null 後續動作
         String name = null; 
         Optional<String> optName = Optional.ofNullable(name);
         
@@ -98,4 +102,6 @@ public class OptionalExample {
             System.out.println(e.getMessage());
         }
     }
+
+    // TODO: 多寫幾個範例來串接上方全部的function.
 }
