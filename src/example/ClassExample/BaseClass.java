@@ -126,8 +126,16 @@ public class BaseClass {
     }
 }
 
-class DD {
+/**
+ * 可使用 final 關鍵字來讓class不允許繼承
+ */
+final class DD {
     public void printSelf() {
         System.out.println("DD");
     }
 }
+
+// ! 會有錯誤，因為 DD 不允許被繼承。
+// class EE extends DD {
+
+// }
