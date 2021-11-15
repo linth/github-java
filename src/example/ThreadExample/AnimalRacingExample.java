@@ -5,13 +5,25 @@ package example.ThreadExample;
  */
 public class AnimalRacingExample {    
     public static void main(String[] args) {
+        // without thread to run your code.
+        // ! 執行會是逐步一個一個執行完，才會接續下個任務。
+        noUseThread();
+
+        // use thread to run your code.
+        // ! 執行會是同時執行，不知道誰才會先執行完任務。
+        useMultiThread();
+    }
+
+    public static void noUseThread() {
         // example without using thread.
         AnimalRacingWithoutThread arwt1 = new AnimalRacingWithoutThread("dog");
         AnimalRacingWithoutThread arwt2 = new AnimalRacingWithoutThread("cat");
 
-        // arwt1.run();
-        // arwt2.run();
+        arwt1.run();
+        arwt2.run();
+    }
 
+    public static void useMultiThread() {
         // example with using thread.
         AnimalRacingWithThread arwt3 = new AnimalRacingWithThread("hourse");
         AnimalRacingWithThread arwt4 = new AnimalRacingWithThread("tiger");
@@ -26,7 +38,9 @@ public class AnimalRacingExample {
 }
 
 /**
- * Without thread. 單一執行緒
+ * 使用單一執行緒 (Without thread)
+ * 
+ * ! 請注意單一執行緒跟多執行緒差別: 有繼承 Thread class.
  */
 class AnimalRacingWithoutThread {
     private String name;
@@ -43,7 +57,9 @@ class AnimalRacingWithoutThread {
 }
 
 /**
- * With thread. 多執行緒
+ * 使用多執行緒 (With thread)
+ * 
+ * ! 請注意單一執行緒跟多執行緒差別: 有繼承 Thread class.
  */
 class AnimalRacingWithThread extends Thread {
     private String name;
