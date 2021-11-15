@@ -116,13 +116,13 @@ interface Vehicle<T> {
     /**
      * TODO: 是否可以使用通用介面來讓class繼承並實作細節
      */
-    public Vehicle execute();
+    public Vehicle<?> execute();
 }
 
 /**
- * 實作 interface: Vehicle
+ * 實作 interface: Vehicle + Generic
  */
-class Car<T> implements Vehicle {
+class Car<T> implements Vehicle<T> {
     private String brand;
     private int execute_time;
 
