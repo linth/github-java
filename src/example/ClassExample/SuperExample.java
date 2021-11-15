@@ -15,8 +15,8 @@ public class SuperExample {
         System.out.println("name: " + ape.getName() + "; age: " + ape.getAge());
 
         // child class.
-        Humanity humanity = new Humanity("Peter", 77, 180, 56.1);
-        System.out.println("name: " + humanity.getName() + "; age: " + humanity.getAge() + "; height: " + humanity.getHeight() + "; weight: " + humanity.getWeight());
+        Humanity humanity = new Humanity("Peter", 77, "F0001", 180, 56.1);
+        System.out.println("name: " + humanity.getName() + "; age: " + humanity.getAge() + "; student ID: " + humanity.getStudentId() + "; height: " + humanity.getHeight() + "; weight: " + humanity.getWeight());
     }
 }
 
@@ -44,8 +44,9 @@ class Humanity extends Ape {
     private double height;
     private double weight;
 
-    Humanity(String name, int age, double height, double weight) {
+    Humanity(String name, int age, String studentId, double height, double weight) {
         super(name, age);
+        this.studentId = studentId;
         this.height = height;
         this.weight = weight;
     }
@@ -53,6 +54,10 @@ class Humanity extends Ape {
     Humanity(String name, int age) {
         super(name, age);
         System.out.println("create Humanity constructor.");
+    }
+
+    public String getStudentId() {
+        return studentId;
     }
 
     public double getHeight() {
