@@ -19,6 +19,7 @@ import java.util.Optional;
  * Reference:
  *  - http://blog.tonycube.com/2015/10/java-java8-4-optional.html
  *  - https://www.runoob.com/java/java8-optional-class.html
+ *  - https://medium.com/@curryyen/%E8%81%8A-java-optional-9a5949ab6dc9
  */
 public class OptionalExample {
     public static void main(String[] args) {
