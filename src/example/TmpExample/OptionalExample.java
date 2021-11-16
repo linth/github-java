@@ -1,5 +1,7 @@
 package example.TmpExample;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -35,6 +37,8 @@ public class OptionalExample {
         o.useEmpty();
         o.useOrElse();
         o.useOrElseThrow();
+
+        o.listInOptional();
     }
 
     public void nameNotNull() {
@@ -104,4 +108,27 @@ public class OptionalExample {
     }
 
     // TODO: 多寫幾個範例來串接上方全部的function.
+
+    public void listInOptional() {
+        // * put list into the optional object.
+        List<String> studentList = new ArrayList<>();
+        studentList.add("George");
+        studentList.add("May");
+        studentList.add("HaHa");
+        studentList.add("JJ");
+        studentList.add("PP");
+        studentList.add("John");
+        studentList.add("Amy");
+
+        studentList.forEach(s -> System.out.println(s));
+
+        Optional<List<String>> result = Optional.ofNullable(studentList);
+        System.out.println(result);
+    }
+
+    // TODO: map into optional.
+    // TODO: json into optional.
+    // TODO: any object or collection into optional.
+
+    // ? THINK: stream, collection, iterable, iterator, ..., etc.
 }

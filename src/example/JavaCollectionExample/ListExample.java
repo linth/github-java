@@ -4,6 +4,8 @@ import java.util.*;
 
 /**
  * List 範例
+ *  - 搭配 iterable
+ *  - 搭配 iterator
  * 
  *             ----------
  *            |  List    |  

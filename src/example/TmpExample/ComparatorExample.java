@@ -15,6 +15,7 @@ import java.util.List;
  * Reference:
  *  - https://dotblogs.com.tw/duke/2019/12/13/151221
  *  - https://ithelp.ithome.com.tw/articles/10229868
+ *  - https://ithelp.ithome.com.tw/articles/10229625
  */
 public class ComparatorExample {
     public static void main(String[] args) {
