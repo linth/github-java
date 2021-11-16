@@ -12,17 +12,36 @@ import java.util.List;
  * 3) 如果能使用跌代器iterator來歷遍就可以使用foreach 
  * 4) Map無法直接使用foreach，但List, Set可以。
  * 
- * TODO: 增加 forEachRemaining 範例
+ * 
+ * Iterable:
+ *!  - 代表能被迭代的集合，所以能被For-Each loop及有forEach()方法；
+ * 
+ * Iterator: (迭代器)
+ *!  - 代表集合的迭代器，所以有hasNext()及next()用來迭代的方法。
+ * 
+ * TODO: 增加 forEachRemaining 範例, iterator().forEachRemaining
  * 
  * Reference 
  *  - https://kucw.github.io/blog/2018/12/java-iterator/
  *  - https://www.baeldung.com/java-iterable-to-collection
  *  - https://www.gushiciku.cn/pl/g25m/zh-tw
+ *  - https://openhome.cc/Gossip/Java/IterableIterator.html
  */
 
-// interface Iterable<T> {
-// Iterator<T> iterator();
-// }
+ // 只要繼承 Iterable 介面都必須要實作 iterator() 方法。
+ /*
+interface Iterable<T> {
+    Iterator<T> iterator();
+
+    default void forEach(Consumer<? super T> action) {
+        Objects.requireNonNull(action);
+
+        for (T t : this) {
+            action.accept(t);
+        }
+    }
+}
+*/
 
 // ! 可使用跌代器 iterator 去歷遍 ArrayList
 // interface Iterator<E> {
@@ -35,51 +54,37 @@ import java.util.List;
 
 public class BaseIter {
     public static void main(String[] args) {
-        List<String> list = new ArrayList<>();
-        list.add("hello");
-        list.add("world.");
+        useIterable();
+        useIterator();
 
-        Iterator<String> its = list.iterator();
-
-        // while (true) {
-        // if (its.hasNext()) {
-        // System.out.println(its.next());
-        // } else {
-        // break;
-        // }
-        // }
-
-        // 通常會寫的程式碼，使用foreach
-        for (String s : list) {
-            System.out.println(s);
-        }
-
-        // 實際上會被編譯成使用iterator去歷遍。
-
-        iterableExample();
+        // TODO: 舉例有無擁有iterable，但沒有iterator的範例!?
     }
 
-    /**
-     * In this tutorial, we explore different ways to convert an iterable a collection in Java.
-     */
-    public static void iterableExample() {
-        // ! 請注意 iterable 和 iterator 差異!!
+    // ! 請注意 useIterable 和 useIterator 差異!!
+    public static void useIterable() {
+        // 使用 iterable 來迭代
+        Iterable<String> iter = Arrays.asList("john", "tom", "jane");
 
-        // define our Iterable.
-        Iterable<String> iterable = Arrays.asList("john", "tom", "jane");
+        System.out.println("使用 iterable 來迭代歷遍:");
+        iter.forEach(s -> {
+            System.out.println(s);
+        });
+    }
 
-        // define a simple Iterator.
-        Iterator<String> iterator = iterable.iterator();
+    public static void useIterator() {
+        // 使用 iterator 來迭代
+        Iterable<String> iter = Arrays.asList("john", "tom", "jane");
 
-        System.out.println("使用 iterable 歷遍: ");
-        iterable.forEach(s -> { System.out.println(s); });
-        System.out.println("使用 iterator 歷遍: ");
-        iterator.forEachRemaining(s -> { System.out.println(s); });
+        Iterator<String> iterator = iter.iterator();
+
+        System.out.println("使用 iterator 來迭代歷遍:");
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
     }
 
     public static void iterableGenericExample() {
-        // TODO: 可以試試看使用 generic method
-        Iterable<String> iterable = Arrays.asList("john", "tom", "jane");
+        // TODO: 可以試試看使用 generic method.
     }
 
     public void testIterableConvertToList() {
