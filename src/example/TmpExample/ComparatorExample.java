@@ -17,12 +17,13 @@ import java.util.List;
  *  - https://ithelp.ithome.com.tw/articles/10229868
  *  - https://ithelp.ithome.com.tw/articles/10229625
  */
-public class ComparatorExample {
+public class ComparatorExample<T> {
     public static void main(String[] args) {
         sort();
     }
 
-    public static void sort() {
+    public static List<Employee> generateData() {
+        // generate data.
         List<Employee> employees = new ArrayList<>();
 
         employees.add(new Employee(1, "George", 88888));
@@ -31,10 +32,30 @@ public class ComparatorExample {
         employees.add(new Employee(5, "Pany", 22256));
         employees.add(new Employee(3, "John", 136241));
         employees.add(new Employee(6, "HaHa", 112789));
+        return employees;
+    }
 
-        employees.forEach(s -> System.out.println(s.getId()));
-        System.out.println(employees.toString());
+    public static List<Employee> generateData2() {
+        // generate data.
+        List<Employee> employees = new ArrayList<>();
 
+        employees.add(new Employee(1, "George", 5133513));
+        employees.add(new Employee(2, "May", 154623));
+        employees.add(new Employee(4, "Peter", 214696));
+        employees.add(new Employee(5, "Pany", 37763546));
+        employees.add(new Employee(3, "John", 642425));
+        employees.add(new Employee(6, "HaHa", 262464688));
+        return employees;
+    }
+
+    public static void sort() {
+        List<Employee> employees = generateData();
+        
+        sortingByName(employees);
+        sortingBySalary(employees);
+    }
+
+    public static void sortingByName(List<Employee> employees) {
         Comparator<Employee> employeeNameComparator = new Comparator<Employee>() {
             @Override
             public int compare(Employee e1, Employee e2) {
@@ -44,12 +65,13 @@ public class ComparatorExample {
 
         // sorting by name.
         Collections.sort(employees, employeeNameComparator);
-        System.out.println("\n Employees: " + employees);
-        System.out.println("----------------------------");
+        System.out.println("===sorting by name===");
         employees.forEach(s -> {
-            System.out.println(s.getName());
+            System.out.println("id: " + s.getId() + "; name: " + s.getName() + "; salary: " + s.getSalary());
         });
+    }
 
+    public static void sortingBySalary(List<Employee> employees) {
         Comparator<Employee> employeeSalayComparator = new Comparator<Employee>() {
             @Override
             public int compare(Employee e1, Employee e2) {
@@ -65,14 +87,27 @@ public class ComparatorExample {
 
         // sorting by salary.
         Collections.sort(employees, employeeSalayComparator);
-        System.out.println("\n Employees: " + employees);
-        System.out.println("----------------------------");
+        System.out.println("===sorting by salary===");
         employees.forEach(s -> {
-            System.out.println(s.getSalary());
+            System.out.println("id: " + s.getId() + "; name: " + s.getName() + "; salary: " + s.getSalary());
         });
     }
+
+    // public void sortingByYouWant(List<T> t) {
+    //     // TODO: think about using generic class/function to implement it.
+    //     Comparator<T> tComparator = new Comparator<T>() {
+    //         @Override
+    //         public int compare(T t1, T t2) {
+    //             // TODO: not sure how to implement it.
+    //             return t1.getName().compareTo(t2.getName());
+    //         }
+    //     };
+    // }
 }
 
+/**
+ * Employee's class structure.
+ */
 class Employee {
     int id;
     String name;
