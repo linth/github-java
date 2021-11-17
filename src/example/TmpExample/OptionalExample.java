@@ -1,7 +1,9 @@
 package example.TmpExample;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 /**
@@ -40,6 +42,7 @@ public class OptionalExample {
         o.useOrElseThrow();
 
         o.listInOptional();
+        o.mapInOptional();
     }
 
     public void nameNotNull() {
@@ -117,26 +120,53 @@ public class OptionalExample {
         // TODO: think the process of situation 2.
     }
 
+    public List<String> putCollectionIntoOptional() {
+        List<String> list = new ArrayList<>();
+        list.add("George");
+        list.add("May");
+        list.add("HaHa");
+        list.add("JJ");
+        list.add("PP");
+        list.add("John");
+        list.add("Amy");
+        return list;
+    }
+
+    public Map<String, String> putMapIntoOptional() {
+        Map<String, String> map = new HashMap<>();
+        map.put("P001", "GG");
+        map.put("P002", "Haha");
+        map.put("P003", "Amy");
+        return map;
+    }
+
     public void listInOptional() {
         // * put list into the optional object.
-        List<String> studentList = new ArrayList<>();
-        studentList.add("George");
-        studentList.add("May");
-        studentList.add("HaHa");
-        studentList.add("JJ");
-        studentList.add("PP");
-        studentList.add("John");
-        studentList.add("Amy");
 
-        studentList.forEach(s -> {
+        System.out.println("-------------------------");
+        System.out.println("execute listInOptional().");
+        System.out.println("-------------------------");
+
+        putCollectionIntoOptional().forEach(s -> {
             System.out.println(s);
         });
 
-        Optional<List<String>> result = Optional.ofNullable(studentList);
+        Optional<List<String>> result = Optional.ofNullable(putCollectionIntoOptional());
         System.out.println(result);
     }
 
-    // TODO: map into optional.
+    public void mapInOptional() {
+        // * put map into the optional object.
+
+        System.out.println("-------------------------");
+        System.out.println("execute mapInOptional().");
+        System.out.println("-------------------------");
+
+        putMapIntoOptional().forEach((i, n) -> {
+            System.out.println(i + ", " + n);
+        });
+    }
+    
     // TODO: json into optional.
     // TODO: any object or collection into optional.
 
