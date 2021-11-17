@@ -108,7 +108,14 @@ public class OptionalExample {
         }
     }
 
-    // TODO: 多寫幾個範例來串接上方全部的function.
+    // * example for chaining the above functions.
+    public void situation1() {
+        // TODO: think the process of situation 1.
+    }
+
+    public void situation2() {
+        // TODO: think the process of situation 2.
+    }
 
     public void listInOptional() {
         // * put list into the optional object.
@@ -121,7 +128,9 @@ public class OptionalExample {
         studentList.add("John");
         studentList.add("Amy");
 
-        studentList.forEach(s -> System.out.println(s));
+        studentList.forEach(s -> {
+            System.out.println(s);
+        });
 
         Optional<List<String>> result = Optional.ofNullable(studentList);
         System.out.println(result);
