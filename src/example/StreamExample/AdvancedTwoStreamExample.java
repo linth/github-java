@@ -19,7 +19,11 @@ public class AdvancedTwoStreamExample {
         // interaction example.
         interactionExample();
 
-        // 
+        // union example.
+
+        // subtraction example.
+
+        // TODO: 當如果資料結構比較複雜的時候，是否能依舊使用這些function.
     }
 
     public static void interactionExample() {
