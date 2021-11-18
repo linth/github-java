@@ -16,6 +16,7 @@ import java.util.List;
  *  - https://dotblogs.com.tw/duke/2019/12/13/151221
  *  - https://ithelp.ithome.com.tw/articles/10229868
  *  - https://ithelp.ithome.com.tw/articles/10229625
+ *  - https://www.geeksforgeeks.org/comparable-vs-comparator-in-java/
  */
 public class ComparatorExample<T> {
     public static void main(String[] args) {
@@ -49,10 +50,13 @@ public class ComparatorExample<T> {
     }
 
     public static void sort() {
+        // * sorting function.
+
+        // generate a series of employee.
         List<Employee> employees = generateData();
         
-        sortingByName(employees);
-        sortingBySalary(employees);
+        sortingByName(employees); // sorting by name.
+        sortingBySalary(employees); // sorting by salary.
     }
 
     public static void sortingByName(List<Employee> employees) {
@@ -93,6 +97,7 @@ public class ComparatorExample<T> {
         });
     }
 
+    // TODO: how to use generic function and implement it.
     // public void sortingByYouWant(List<T> t) {
     //     // TODO: think about using generic class/function to implement it.
     //     Comparator<T> tComparator = new Comparator<T>() {
@@ -103,6 +108,17 @@ public class ComparatorExample<T> {
     //         }
     //     };
     // }
+}
+
+class SortByName implements Comparator<Employee> {
+    // * compare Employee by name.
+
+    // TODO: add anther condition.
+    // https://www.geeksforgeeks.org/comparable-vs-comparator-in-java/
+    public int compare(Employee e1, Employee e2) {
+        // ! return int ??
+        return e1.getName().compareTo(e2.getName());
+    }
 }
 
 /**
