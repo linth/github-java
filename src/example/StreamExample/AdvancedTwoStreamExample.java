@@ -1,9 +1,7 @@
 package example.StreamExample;
 
-import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -59,21 +57,24 @@ public class AdvancedTwoStreamExample {
 
     public static List<String> data() {
         // * generate a list of data.
-        List<String> list = Arrays.asList("Java", "JavaScript", "python", "PHP", "C#");
-        return list;
+        return Arrays.asList("Java", "JavaScript", "python", "PHP", "C#");
     }
 
     public static List<String> data2() {
         // * generate a list of data2.
-        List<String> list = Arrays.asList("Java", "JavaScript", "C#", "Golang", "Swift");
-        return list;
+        return Arrays.asList("Java", "JavaScript", "C#", "Golang", "Swift");
     }
 
     public static List<String> interaction(List<String> firstList, List<String> secondList) {
         // * find the interaction of two Lists.
         // List<String> result = new ArrayList<>();
+        // origin way.
+        // return firstList.stream()
+        //     .filter(s -> secondList.contains(s))
+        //     .collect(Collectors.toList());
+        // another clean way.
         return firstList.stream()
-            .filter(s -> secondList.contains(s))
+            .filter(secondList::contains)
             .collect(Collectors.toList());
     }
 
