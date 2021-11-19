@@ -26,7 +26,7 @@ public class StaticParameter {
 
         k1.name = "kk1";
         k2.name = "kk2";
-        k1.age = 24;
+        KKStudent.age = 24; // k1.age = 24; // bad style. 
 
         k1.output();
         k2.output();
@@ -55,6 +55,14 @@ class Student {
 class KKStudent {
     public static int age; //! 跟Student差別在於 static 
     public String name;
+
+    KKStudent() {
+
+    }
+
+    KKStudent(String name) {
+        this.name = name;
+    }
 
     public void output() {
         System.out.println("Name: " + name + "; Age: " + age);
