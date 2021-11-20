@@ -3,7 +3,7 @@ package example.ExceptionExample;
 /**
  * Error exception.
  * 
- * Next issues: What kinds of exception for java?
+ * TODO: Next issues: What kinds of exception for java or list them?
  * 
  * Reference:
  *  - https://www.liaoxuefeng.com/wiki/1252599548343744/1264734349295520
