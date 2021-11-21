@@ -3,11 +3,13 @@ package example.ExceptionExample;
 /**
  * ! (重要!!)
  * 使用串連 + try-catch 方式去堆疊追蹤 bug error。
+ * printStackTrace() 不適合用在 prod 環境上，如使用在 prod 環境上你需要使用 log 方式記錄。
  * 
  * TODO: 需要使用 debug = true/false 來開關 debug (How to disable stack trace?)
  * 
  * Reference:
  *  - https://openhome.cc/Gossip/JavaEssence/StackTrace.html
+ *  - https://stackoverflow.com/questions/2560368/what-is-the-use-of-printstacktrace-method-in-java
  */
 public class StackTraceExample {
     public static void main(String[] args) throws Exception {
