@@ -1,6 +1,7 @@
 package example.ExceptionExample;
 
 /**
+ * ! (重要!!)
  * 使用串連 + try-catch 方式去堆疊追蹤 bug error。
  * 
  * TODO: 需要使用 debug = true/false 來開關 debug (How to disable stack trace?)
@@ -22,6 +23,9 @@ public class StackTraceExample {
 
         Job job = new Job();
         job.process();
+
+        Job job2 = new Job();
+        job2.executeTask();
     }
 }
 
@@ -35,7 +39,19 @@ class Color {
     public static final String BLACK = "\u001B[0m";
 }
 
-class Job {
+// TODO: create a function to receive the string message and change color.
+class MessageException {
+    public static String warning(String msg) {
+        return Color.RED + msg + Color.WHITE;
+    }
+
+    public static void general(String msg) {
+        // return Color.BLUE + msg + Color.WHITE; 
+        System.out.println(Color.PURPLE + msg + Color.WHITE);
+    }
+}
+
+class Job extends Block {
     /**
      * 使用串接方式 + 堆疊追蹤 讓debug知道錯誤在那邊，縮小trace bug範圍。
      * 
@@ -44,11 +60,16 @@ class Job {
      */
     public String process() throws Exception {
         try {
-            step1().step2().step3();
+            MessageException.general("starting to execute process.");
+            step1()
+                .step2()
+                .step3();
+            MessageException.general("ending to execute process.");
             return "success";
         } catch (Exception e) {
             e.printStackTrace();
-            throw new Exception(Color.RED + "[process4 function 的 exception]" + Color.WHITE);
+            // throw new Exception(Color.RED + "[process4 function 的 exception]" + Color.WHITE);
+            throw new Exception(MessageException.warning("[process4 function 的 exception]"));
         }
     }
 
@@ -88,4 +109,50 @@ class Job {
         }
         return this;
     }
+
+    @Override
+    public void doTask() {
+        MessageException.general("starting the doTask.");
+
+        step4()
+            .step5()
+            .step6();
+
+        MessageException.general("ending doTask.");
+    }
+
+    public Job step4() {
+        System.out.println(Color.BLUE + "execute step4..." + Color.WHITE);
+        return this;
+    }
+
+    public Job step5() {
+        System.out.println(Color.BLUE + "execute step5..." + Color.WHITE);
+        return this;
+    }
+
+    public Job step6() {
+        System.out.println(Color.BLUE + "execute step6..." + Color.WHITE);
+        return this;
+    }
+}
+
+// TODO: 是否可以建立一個 class 專心處理 try-catch 的架構? 
+// TODO: using interface class, abstract class.
+
+class Block {
+    public void doTask() {
+        // do something.
+    }
+
+    public void executeTask() throws Exception {
+        try {
+            doTask();
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new Exception("Block error.");
+        }
+    }
+
+    // TODO: add notimplement error exception.
 }
