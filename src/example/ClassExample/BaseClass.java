@@ -8,7 +8,6 @@ package example.ClassExample;
  * 無法接觸及, 無法自外界窺伺。
  * 
  * 
- * TODO: add private, protected.
  * TODO: use super().
  * 
  * 你可以抽象化interface, abstract, or concrete class.
