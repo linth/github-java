@@ -9,7 +9,6 @@ import java.util.stream.Stream;
 /**
  * Stream 範例
  * 
- * 
  * Reference
  *  - https://mrbird.cc/java8stream1.html
  *  - https://blog.tonycube.com/2015/10/java-java8-3-stream.html
@@ -63,8 +62,9 @@ public class StreamBase {
     // ! 使用stream來解決問題
     public static List<String> dealWithStream(List<String> list) {
         List<String> res = new ArrayList<>();
-        list.stream()
-            .filter(s -> s.startsWith("J"));
+        res = list.stream()
+            .filter(s -> s.startsWith("J"))
+            .collect(Collectors.toList());
             // .map(String::toUpperCase)
             // .forEach(System.out::println);
         return res;
