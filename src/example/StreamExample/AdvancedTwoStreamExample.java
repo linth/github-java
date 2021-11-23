@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
  * Reference:
  *  - https://www.gushiciku.cn/pl/pjFy/zh-tw
  *  - https://leetcode.com/problems/intersection-of-two-arrays/discuss/81969/Three-Java-Solutions
+ *  - https://www.itread01.com/content/1545383650.html
  */
 public class AdvancedTwoStreamExample {
     public static void main(String[] args) {
