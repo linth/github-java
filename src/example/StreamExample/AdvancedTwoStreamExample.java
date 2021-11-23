@@ -13,12 +13,14 @@ import java.util.stream.Collectors;
  * 
  * Reference:
  *  - https://www.gushiciku.cn/pl/pjFy/zh-tw
+ *  - https://leetcode.com/problems/intersection-of-two-arrays/discuss/81969/Three-Java-Solutions
  */
 public class AdvancedTwoStreamExample {
     public static void main(String[] args) {
         // interaction example.
-        interactionExample();
-        interactionExample2();
+        // interactionExample();
+        // interactionExample2();
+        interactionExample3();
 
         // union example.
         // unionExample();
@@ -75,6 +77,30 @@ public class AdvancedTwoStreamExample {
             .forEach(s -> {
                 System.out.println(s);
             });
+    }
+
+    public static void interactionExample3() {
+        List<Device> list = new ArrayList<>();
+        
+        list.add(new Device("ZG02000010"));
+        list.add(new Device("ZG02000030"));
+        list.add(new Device("ZG02000050"));
+        list.add(new Device("ZG02000060"));
+
+        list.forEach(s -> {
+            System.out.println(s.sn);
+        });
+
+        NewVendor newVendor = new NewVendor();
+        newVendor.addListElement(new Device("ZG02000010"));
+        newVendor.addListElement(new Device("ZG02000050"));
+        newVendor.sn
+            .stream()
+            .forEach(s->System.out.println(s.sn));
+        
+        list.stream()
+            // .filter(d -> ((List<Device>) d).contains(newVendor.sn))
+            .forEach(System.out::println);
     }
 
     // // TODO: finish union example.
@@ -157,6 +183,13 @@ public class AdvancedTwoStreamExample {
         return vendor;
     }
 
+    public static NewVendor data5() {
+        NewVendor newVendor = new NewVendor();
+        newVendor.addListElement(new Device("ZG02000010"));
+        newVendor.addListElement(new Device("ZG02000050"));
+        return newVendor;
+    }
+
     public static List<String> interaction(List<String> firstList, List<String> secondList) {
         // * find the interaction of two Lists. (交集)
         // List<String> result = new ArrayList<>();
@@ -235,6 +268,14 @@ class Vendor {
 
     public List<Device> getSn() {
         return snInfo.get("sn");
+    }
+}
+
+class NewVendor {
+    public List<Device> sn = new ArrayList<>();
+
+    public void addListElement(Device device) {
+        sn.add(device);
     }
 }
 
