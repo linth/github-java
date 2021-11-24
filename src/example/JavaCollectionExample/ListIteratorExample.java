@@ -2,6 +2,7 @@ package example.JavaCollectionExample;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.ListIterator;
 
 /**
@@ -15,14 +16,15 @@ public class ListIteratorExample {
         customArrayList.createArrayList();
 
         CustomArrayList customArrayList2 = new CustomArrayList();
-        customArrayList2.createLinkedList();
+        customArrayList2.createLinkedListAndPrintThem();
     }
 }
 
 class CustomArrayList {
     public void createArrayList() {
         // ArrayList<String> list = new ArrayList<String>();
-        ArrayList<String> list = addData(new ArrayList<String>());
+        // ArrayList<String> list = addData(new ArrayList<String>());
+        List<String> list = addData(new ArrayList<String>());
         ListIterator<String> litr = list.listIterator();
 
         // list.forEach(s -> {
@@ -40,14 +42,23 @@ class CustomArrayList {
         }
     }
 
-    public void createLinkedList() {
+    public void createLinkedListAndPrintThem() {
+        // * create linked list and print them.
         LinkedList<String> linkedList = addData(new LinkedList<String>());
-        // TODO: 確認是否有除 ListIterator 以外的 iterator ?
-        ListIterator<String> litr = linkedList.listIterator();
 
-        // linkedList.forEach(s -> {
-        //     System.out.println(s); // using foreach to show.
-        // });
+        // 使用 ListIterator 方式來歷遍
+        ListIterator<String> litr = linkedList.listIterator();
+        // useListIterator(litr);
+        
+        // 使用 foreach 方式來歷遍
+        useForEach(linkedList);
+
+        // 使用 iterator 方式來歷遍
+        useIterator(linkedList);
+    }
+
+    public static void useListIterator(ListIterator<String> litr) {
+        // 使用 ListIterator 方式來歷遍
 
         System.out.println("from front to back.");
         while (litr.hasNext()) {
@@ -60,7 +71,23 @@ class CustomArrayList {
         }
     }
 
-    public ArrayList<String> addData(ArrayList<String> arrayList) {
+    public static void useForEach(LinkedList<String> linkedList) {
+        // * 使用 foreach 方式來歷遍
+        linkedList.forEach(s -> {
+            System.out.println(s);
+        });
+    }
+
+    public static void useIterator(LinkedList<String> linkedList) {
+        // * 使用 iterator 方式來歷遍
+        linkedList.iterator()
+            .forEachRemaining(s -> {
+                System.out.println(s);
+            });
+    }
+
+    public List<String> addData(List<String> arrayList) {
+        // * add data: arraylist.
         arrayList.add("TW");
         arrayList.add("HK");
         arrayList.add("US");
@@ -69,6 +96,7 @@ class CustomArrayList {
     }
 
     public LinkedList<String> addData(LinkedList<String> linkedList) {
+        // * add data: linked list.
         linkedList.add("TW");
         linkedList.add("CN");
         linkedList.add("HK");
