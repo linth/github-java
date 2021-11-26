@@ -5,7 +5,7 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 /**
- * Queue:
+ * Queue 範例:
  *  - 把資料加入queue的動作稱為 enqueue
  *  - 把資料取得queue的動作稱為 dequeue
  * 
@@ -17,14 +17,18 @@ public class QueueExample {
     public static void main(String[] args) {
         LinkedListQueueExample lq = new LinkedListQueueExample();
         lq.run();
+
+        System.out.println("-------------------");
+        BasicQueueExample();
     }
 
-    public void BasicQueueExample() {
+    public static void BasicQueueExample() {
+        // * 用 linkedlist 當 queue 使用 (先進先出)
         LinkedList<Integer> queue = new LinkedList<Integer>();
 
         for (int i=10; i<=50; i+=10) {
             queue.add(i);
-            System.out.println("queue: " + queue);
+            // System.out.println("queue: " + queue);
         }
 
         int loop = queue.size();
@@ -82,6 +86,7 @@ class LinkedListQueueExample {
 }
 
 class PriorityQueueExample {
+    // TODO: add Priority Queue Example.
     public void run() {
         Queue<String> q2 = new PriorityQueue<>();
     }
