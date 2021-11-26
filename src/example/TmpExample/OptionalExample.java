@@ -1,5 +1,6 @@
 package example.TmpExample;
 
+import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -43,6 +44,8 @@ public class OptionalExample {
 
         o.listInOptional();
         o.mapInOptional();
+
+        o.ObjectDataExample();
     }
 
     public void nameNotNull() {
@@ -169,6 +172,68 @@ public class OptionalExample {
     
     // TODO: json into optional.
     // TODO: any object or collection into optional.
+    public void ObjectDataExample() {
+        List<Student> students = new ArrayList<>();
+        List<Student> students2 = new ArrayList<>();
+        
+        for (int i=0; i<10; i++) {
+            Student student = new Student("student" + i, "F00" + i, (int) (Math.random() * 100 + i));
+            students.add(student);
+        }
+
+        students.forEach(s -> {
+            System.out.println(s + ", name: " + s.getName() + "; id: " + s.getId() + "; age: " + s.getAge());
+        });
+
+        Optional<List<Student>> result = Optional.ofNullable(students);
+        System.out.println("result: " + result);
+
+        students.clear();
+
+        Optional<List<Student>> result2 = Optional.ofNullable(students);
+        System.out.println("result2: " + result2);
+        // ! 清空 student 依舊會存在，除非 null。
+        System.out.println(result2.isPresent());
+
+        // ! 把 list object 設定為 null。
+        students2 = null;
+        Optional<List<Student>> result3 = Optional.ofNullable(students2);
+        System.out.println("result3: " + result3.isPresent());
+        System.out.println("result3: " + result3.isEmpty());
+
+        System.out.println("----");
+        students.forEach(s -> {
+            System.out.println(s);
+        });
+    }
 
     // ? THINK: stream, collection, iterable, iterator, ..., etc.
+}
+
+class Student {
+    private String name;
+    private String id;
+    private int age;
+
+    Student(String name, String id, int age) {
+        this.name = name;
+        this.id = id;
+        this.age = age;
+    }
+
+    Student() {
+
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public int getAge() {
+        return age;
+    }
 }
