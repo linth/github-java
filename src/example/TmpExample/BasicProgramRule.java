@@ -31,5 +31,7 @@ package example.TmpExample;
  *  - https://www.gushiciku.cn/pl/aawk/zh-tw
  */
 public class BasicProgramRule {
-    
+    public static void main(String[] args) {
+        
+    }
 }
