@@ -26,7 +26,7 @@ public class IndexOfExample {
     }
 
     public static void findString2() {
-        // * find a specific string (method 2).
+        // * find a specific string (method 2). 
         String string = "a-97,b-98,c-99";
         System.out.println(string.indexOf(99)); // 10
         System.out.println(string.indexOf("c")); // 10
