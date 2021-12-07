@@ -1,5 +1,11 @@
 package designPattern.AbstractFactory;
 
+/**
+ * Java 抽象工廠模式
+ * 
+ * Reference:
+ *  - https://tw511.com/20/210/8168.html
+ */
 public class AbstractFactory {
     public static void main(String[] args) {
 

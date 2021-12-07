@@ -3,10 +3,11 @@ package designPattern.Proxy;
 import java.util.HashMap;
 
 /**
- * Proxy 範例
+ * Proxy 範例 (Java設計模式) - 
  * 
  * Reference:
  *  - https://refactoringguru.cn/design-patterns/proxy
+ *  - https://tw511.com/20/210/8192.html
  */
 public class ProxyExample {
     

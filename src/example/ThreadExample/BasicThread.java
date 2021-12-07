@@ -1,7 +1,11 @@
 package example.ThreadExample;
 
 /**
- * Thread basic concept.
+ * Thread basic concept. (Java多執行緒教學)
+ * 
+ * Reference:
+ *  - https://tw511.com/20/203/7948.html
+ *  - https://tw511.com/20/205/7979.html
  */
 public class BasicThread {
     public static void main(String[] args) {
