@@ -18,5 +18,7 @@ package example.TmpExample;
  *  - https://ithelp.ithome.com.tw/articles/10229634
  */
 public class CollectionsExample {
-    
+    public static void main(String[] args) {
+        
+    }
 }
