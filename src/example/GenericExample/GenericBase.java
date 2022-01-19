@@ -9,6 +9,7 @@ import java.util.List;
  * 
  * Reference:
  *  - https://tw511.com/20/209/8135.html
+ *  - https://www.youtube.com/watch?v=K1iu1kXkVoA
  */
 public class GenericBase {
     public static void main(String[] args) {
