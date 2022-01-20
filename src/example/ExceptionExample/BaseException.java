@@ -2,6 +2,9 @@ package example.ExceptionExample;
 
 /**
  * 建立基礎例外處理的class, 跟NrBaseException, NrDataException class類似
+ * 
+ * Reference:
+ *  - https://www.youtube.com/watch?v=1XAfapkBQjk
  */
 public class BaseException extends RuntimeException {
 

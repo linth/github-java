@@ -7,6 +7,7 @@ package example.ExceptionExample;
  * 
  * Reference:
  *  - https://www.liaoxuefeng.com/wiki/1252599548343744/1264734349295520
+ *  - https://www.youtube.com/watch?v=1XAfapkBQjk
  */
 public class example {
     public static void main(String[] args) {
