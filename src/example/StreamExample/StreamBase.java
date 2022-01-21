@@ -148,6 +148,20 @@ public class StreamBase {
         // ? [Think] how to filter through a JSON document using Java 8 Stream API?
     }
 
+    public void useContains() {
+        // TODO: use contains() to check statement in stream().
+        // * Reference: https://stackoverflow.com/questions/35200250/java-contains-vs-anymatch-behaviour/35200414
+    }
+
+    public void useAnyMatch() {
+        // TODO: use anyMatch() to check statement in stream().
+        // ! it seems the same as contains.
+        // * Reference: https://stackoverflow.com/questions/35200250/java-contains-vs-anymatch-behaviour/35200414
+
+        // you need to consider this sitution that no such elemeent exception when looking for a match in a List.
+        // * Reference: https://stackoverflow.com/questions/36346409/nosuchelementexception-when-looking-for-a-match-in-a-list
+    }
+
     public void useFlatMap() {
         // TODO: use flatMap.
     }
