@@ -15,11 +15,13 @@ public class ArrayListExample {
     public static void main(String[] args) {
         // example();
 
-        example2();
+        // example2();
+
+        example3();
     }
 
     public static void example() {
-        // using string element and put into the arraylist.
+        // * using string element and put into the arraylist.
         ArrayList<String> list = generateData();
 
         arrayList2Stream(list)
@@ -56,6 +58,41 @@ public class ArrayListExample {
         // });
     }
 
+    public static void example3() {
+        // ! 比較 foreach vs. stream 優缺點
+        // * 使用 List and forEach 方式執行.
+        List<Device> l = generateObjectData();
+
+        l.forEach(s -> {
+            s.sn += "1";
+        });
+
+        l.forEach(s -> {
+            System.out.println(s.sn + "; " + s.name);
+        });
+
+        System.out.println("----------------------------");
+        
+        // * 使用 List and stream 方式執行. 
+        // ! 處理資料相對優勢
+        List<Device> l2 = generateObjectData();
+        l2.stream().map(s -> s.sn+="1").forEach(s -> {
+            System.out.println(s);
+        });
+
+        System.out.println("----------------------------");
+
+        // * 使用 List and parallelStream 方式執行. 
+        // ! (順序會變不一樣!!!!)
+        List<Device> l3 = generateObjectData();
+        l3.parallelStream().forEach(s3 -> {
+            System.out.println(s3.sn + "; " + s3.name);
+        });
+    }
+
+    /**
+     * Generate Data Function.
+     */
     public static ArrayList<String> generateData() {
         // * generate data which is arraylist.
         ArrayList<String> list = new ArrayList<String>();
