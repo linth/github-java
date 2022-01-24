@@ -42,16 +42,19 @@ abstract class Human implements HumanCategory, Animal {
         this.weight = weight;
     }
 
+    @Override
     public String getName() {
         System.out.println("Name: " + name);
         return name;
     }
 
+    @Override
     public double getHeight() {
         System.out.println("Height: " + height);
         return height;
     }
 
+    @Override
     public double getWeight() {
         System.out.println("Weight: " + weight);
         return weight;
