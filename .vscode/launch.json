@@ -1,0 +1,692 @@
+{
+    // 使用 IntelliSense 以得知可用的屬性。
+    // 暫留以檢視現有屬性的描述。
+    // 如需詳細資訊，請瀏覽: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch SuperConcept",
+            "request": "launch",
+            "mainClass": "example.ClassExample.SuperConcept",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "name": "Java",
+            "type": "java",
+            "request": "launch",
+            "stopOnEntry": true,
+            "jdkPath": "${env:JAVA_HOME}/bin",
+            "cwd": "${fileDirname}",
+            "startupClass": "${fileBasenameNoExtension}",
+            "classpath": [
+                ".",
+                "${fileDirname}"
+            ]
+        },
+        {
+            "name": "Java Console App",
+            "type": "java",
+            "request": "launch",
+            "stopOnEntry": true,
+            "jdkPath": "${env:JAVA_HOME}/bin",
+            "cwd": "${fileDirname}",
+            "startupClass": "${fileBasenameNoExtension}",
+            "classpath": [
+                ".",
+                "${fileDirname}"
+            ],
+            "externalConsole": true
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch Consumer",
+            "request": "launch",
+            "mainClass": "JavaIO.Consumer",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch Server",
+            "request": "launch",
+            "mainClass": "JavaIO.Server",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch CalculateTotalTax",
+            "request": "launch",
+            "mainClass": "Money.CalculateTotalTax",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch AbstractFactory",
+            "request": "launch",
+            "mainClass": "designPattern.AbstractFactory.AbstractFactory",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch Factory",
+            "request": "launch",
+            "mainClass": "designPattern.AbstractFactory.Factory.Factory",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch DemoMultiThread",
+            "request": "launch",
+            "mainClass": "designPattern.Singleton.DemoMultiThread",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch DemoSingleThread",
+            "request": "launch",
+            "mainClass": "designPattern.Singleton.DemoSingleThread",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch AbstractClassExample",
+            "request": "launch",
+            "mainClass": "example.ClassExample.AbstractClassExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch Bank",
+            "request": "launch",
+            "mainClass": "example.ClassExample.Bank",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch BaseClass",
+            "request": "launch",
+            "mainClass": "example.ClassExample.BaseClass",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch BaseInterface",
+            "request": "launch",
+            "mainClass": "example.ClassExample.BaseInterface",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch InheritanceInterface",
+            "request": "launch",
+            "mainClass": "example.ClassExample.InheritanceInterface",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch InterfaceClassExample",
+            "request": "launch",
+            "mainClass": "example.ClassExample.InterfaceClassExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch MultipleInheritanceInterfaceExample",
+            "request": "launch",
+            "mainClass": "example.ClassExample.MultipleInheritanceInterfaceExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch ObjectExample",
+            "request": "launch",
+            "mainClass": "example.ClassExample.ObjectExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch PolymorphismExample",
+            "request": "launch",
+            "mainClass": "example.ClassExample.PolymorphismExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch StaticParameter",
+            "request": "launch",
+            "mainClass": "example.ClassExample.StaticParameter",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch SuperExample",
+            "request": "launch",
+            "mainClass": "example.ClassExample.SuperExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch ThreeTierExample",
+            "request": "launch",
+            "mainClass": "example.ClassExample.ThreeTierExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch CustomEnum",
+            "request": "launch",
+            "mainClass": "example.EnumExample.CustomEnum",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch EnumBase",
+            "request": "launch",
+            "mainClass": "example.EnumExample.EnumBase",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch EnumObjectExample",
+            "request": "launch",
+            "mainClass": "example.EnumExample.EnumObjectExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch CustomExceptionExample",
+            "request": "launch",
+            "mainClass": "example.ExceptionExample.CustomExceptionExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch DemoException",
+            "request": "launch",
+            "mainClass": "example.ExceptionExample.DemoException",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch MultiExceptions",
+            "request": "launch",
+            "mainClass": "example.ExceptionExample.MultiExceptions",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch SimpleExceptionExample",
+            "request": "launch",
+            "mainClass": "example.ExceptionExample.SimpleExceptionExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch StackTraceExample",
+            "request": "launch",
+            "mainClass": "example.ExceptionExample.StackTraceExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch ThrowExample",
+            "request": "launch",
+            "mainClass": "example.ExceptionExample.ThrowExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch ThrowTemplateExample",
+            "request": "launch",
+            "mainClass": "example.ExceptionExample.ThrowTemplateExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch assertExample",
+            "request": "launch",
+            "mainClass": "example.ExceptionExample.assertExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch colorLoggingExample",
+            "request": "launch",
+            "mainClass": "example.ExceptionExample.colorLoggingExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch example",
+            "request": "launch",
+            "mainClass": "example.ExceptionExample.example",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch BaseExpress",
+            "request": "launch",
+            "mainClass": "example.ExpressionExample.BaseExpress",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch ForEachSample",
+            "request": "launch",
+            "mainClass": "example.ForEachExample.ForEachSample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch GenericCollectionExample",
+            "request": "launch",
+            "mainClass": "example.GenericExample.GenericCollectionExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch GenericFooExample",
+            "request": "launch",
+            "mainClass": "example.GenericExample.GenericFooExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch GenericForTesting",
+            "request": "launch",
+            "mainClass": "example.GenericExample.GenericForTesting",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch InterfaceAndGenericExample",
+            "request": "launch",
+            "mainClass": "example.GenericExample.InterfaceAndGenericExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main(1)",
+            "request": "launch",
+            "mainClass": "example.GenericExample.Main",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch Pair",
+            "request": "launch",
+            "mainClass": "example.GenericExample.Pair",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch inner",
+            "request": "launch",
+            "mainClass": "example.InnerExample.inner",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch User",
+            "request": "launch",
+            "mainClass": "example.IoCExample.User",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch ArrayListExample",
+            "request": "launch",
+            "mainClass": "example.JavaCollectionExample.ArrayListExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch ListExample",
+            "request": "launch",
+            "mainClass": "example.JavaCollectionExample.ListExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch ListIteratorExample",
+            "request": "launch",
+            "mainClass": "example.JavaCollectionExample.ListIteratorExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch MapExample",
+            "request": "launch",
+            "mainClass": "example.JavaCollectionExample.MapExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch QueueExample",
+            "request": "launch",
+            "mainClass": "example.JavaCollectionExample.QueueExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch SetExample",
+            "request": "launch",
+            "mainClass": "example.JavaCollectionExample.SetExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch StackExample",
+            "request": "launch",
+            "mainClass": "example.JavaCollectionExample.StackExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch JsonObjectExample",
+            "request": "launch",
+            "mainClass": "example.JsonParseExample.JsonObjectExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch LambdaBase",
+            "request": "launch",
+            "mainClass": "example.LambdaExpressExample.LambdaBase",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch loggingExample",
+            "request": "launch",
+            "mainClass": "example.LoggingExample.loggingExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch ArgumentMethod",
+            "request": "launch",
+            "mainClass": "example.MethodExample.ArgumentMethod",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch ISPExample",
+            "request": "launch",
+            "mainClass": "example.SOLIDExample.ISPExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch LSPExample",
+            "request": "launch",
+            "mainClass": "example.SOLIDExample.LSPExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch OCPExample",
+            "request": "launch",
+            "mainClass": "example.SOLIDExample.OCPExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch SRPExample",
+            "request": "launch",
+            "mainClass": "example.SOLIDExample.SRPExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch SerializableBase",
+            "request": "launch",
+            "mainClass": "example.SerializbaleExample.SerializableBase",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch SerializableExample",
+            "request": "launch",
+            "mainClass": "example.SerializbaleExample.SerializableExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch SerializbaleExampleTest",
+            "request": "launch",
+            "mainClass": "example.SerializbaleExample.SerializbaleExampleTest",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch StaticExample",
+            "request": "launch",
+            "mainClass": "example.StaticExample.StaticExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch AdvancedTwoStreamExample",
+            "request": "launch",
+            "mainClass": "example.StreamExample.AdvancedTwoStreamExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch GenericAndStreamExample",
+            "request": "launch",
+            "mainClass": "example.StreamExample.GenericAndStreamExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch StreamBase",
+            "request": "launch",
+            "mainClass": "example.StreamExample.StreamBase",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch StreamCollect",
+            "request": "launch",
+            "mainClass": "example.StreamExample.StreamCollect",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch AnimalRacingExample",
+            "request": "launch",
+            "mainClass": "example.ThreadExample.AnimalRacingExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch BasicThread",
+            "request": "launch",
+            "mainClass": "example.ThreadExample.BasicThread",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch DaemonExample",
+            "request": "launch",
+            "mainClass": "example.ThreadExample.DaemonExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch ExecutorExample",
+            "request": "launch",
+            "mainClass": "example.ThreadExample.ExecutorExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch JoinThreadExample",
+            "request": "launch",
+            "mainClass": "example.ThreadExample.JoinThreadExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch PriorityThreadExample",
+            "request": "launch",
+            "mainClass": "example.ThreadExample.PriorityThreadExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch Racing",
+            "request": "launch",
+            "mainClass": "example.ThreadExample.Racing",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch Racing2",
+            "request": "launch",
+            "mainClass": "example.ThreadExample.Racing2",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch RunnableExample",
+            "request": "launch",
+            "mainClass": "example.ThreadExample.RunnableExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch SimpleRunnableExample",
+            "request": "launch",
+            "mainClass": "example.ThreadExample.SimpleRunnableExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch SyncBlockExample",
+            "request": "launch",
+            "mainClass": "example.ThreadExample.SyncBlockExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch SyncStaticMethodExample",
+            "request": "launch",
+            "mainClass": "example.ThreadExample.SyncStaticMethodExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch SynchExample",
+            "request": "launch",
+            "mainClass": "example.ThreadExample.SynchExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch DateAndInstantExample",
+            "request": "launch",
+            "mainClass": "example.TimeExample.DateAndInstantExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch DateTimeExample",
+            "request": "launch",
+            "mainClass": "example.TimeExample.DateTimeExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch ComparatorExample",
+            "request": "launch",
+            "mainClass": "example.TmpExample.ComparatorExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch OptionalExample",
+            "request": "launch",
+            "mainClass": "example.TmpExample.OptionalExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch SortingExample",
+            "request": "launch",
+            "mainClass": "example.TmpExample.SortingExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch ifElseExample",
+            "request": "launch",
+            "mainClass": "example.TmpExample.ifElseExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch IndexOfExample",
+            "request": "launch",
+            "mainClass": "example.UtilExample.IndexOfExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch ValueOfExample",
+            "request": "launch",
+            "mainClass": "example.UtilExample.ValueOfExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch AutoBoxing",
+            "request": "launch",
+            "mainClass": "example.WrapperClassExample.AutoBoxing",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch CompareExample",
+            "request": "launch",
+            "mainClass": "example.WrapperClassExample.CompareExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch ConvertExample",
+            "request": "launch",
+            "mainClass": "example.WrapperClassExample.ConvertExample",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch BaseIter",
+            "request": "launch",
+            "mainClass": "example.iterExample.BaseIter",
+            "projectName": "github-java_9de93a8"
+        },
+        {
+            "type": "java",
+            "name": "Launch casting",
+            "request": "launch",
+            "mainClass": "game.concrete.casting",
+            "projectName": "github-java_9de93a8"
+        }
+    ]
+}

@@ -1,4 +1,4 @@
-package example.ClassExample;
+package example.ClassExample.SuperEx;
 
 /**
  * Super concept.
