@@ -3,10 +3,22 @@ package example.ForEachExample;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * for loop
+ * 
+ * keyword:
+ *  - for loop
+ *  - a++, ++a
+ * 
+ * Reference:
+ *  - https://ithelp.ithome.com.tw/articles/10283750
+ */
 public class ForBase {
     public static void main(String[] args) {
         baseForLoop();
         forEachExample();
+
+        aPlusPlusOrPlusPlusA();
     }
 
     public static List<String> generateData() {
@@ -23,6 +35,7 @@ public class ForBase {
     }
 
     public static void baseForLoop() {
+        // * basic for loop.
         List<String> students = generateData(); 
 
         // list 裡面是放 string
@@ -43,6 +56,15 @@ public class ForBase {
         students.forEach(s -> {
             System.out.println(s);
         });
+    }
+
+    public static void aPlusPlusOrPlusPlusA () {
+        // * 區隔 a++ 和 ++a 差別
+        Integer numOne = 1;
+        Integer numTwo = 5;
+
+        System.out.println(numOne++); // 1
+        System.out.println(++numTwo); // 6
     }
 
     // TODO: add another examples.
