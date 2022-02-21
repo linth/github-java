@@ -7,6 +7,7 @@ import java.security.cert.PKIXBuilderParameters;
  * 
  * Reference:
  *  - https://refactoringguru.cn/design-patterns/singleton/java/example
+ *  - https://azeynalli1990.medium.com/5-software-design-patterns-implemented-in-spring-88356dac738d
  */
 public final class Singleton {
     private static Singleton instance;
