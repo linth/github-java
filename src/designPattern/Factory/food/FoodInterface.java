@@ -6,6 +6,7 @@ package designPattern.Factory.food;
  * 
  * Reference:
  *  - https://www.javadoop.com/post/design-pattern
+ *  - http://benyi.logdown.com/posts/2018/02/11/oop-what-is-interface
  */
 public interface FoodInterface {
     public void addSpicy(String amount);
