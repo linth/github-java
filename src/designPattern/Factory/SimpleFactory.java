@@ -16,8 +16,19 @@
 
 package designPattern.Factory;
 
+import designPattern.Factory.food.Food;
+
 /**
  * 簡單工廠模式
+ * ! 請注意 Factory/food下的 class 怎麼寫
+ * 
+ * 優點:
+ * - 簡單實作
+ * - 使用 factory 來屏蔽 new instance.
+ * - 使用單一class: FoodFactory 來進行判斷要使用哪個 instance.
+ * 
+ * 缺點:
+ * - 大量 if-else
  * 
  * Reference:
  *  - https://www.javadoop.com/post/design-pattern
@@ -45,39 +56,5 @@ class FoodFactory {
         } else {
             return null;
         }
-    }
-}
-
-/**
- * 請多琢磨思考 interface class 部分
- *  - interface class 不能 new instance.
- */
-interface FoodInterface {
-    public void addSpicy(String amount);
-    public void addCondiment(String material);
-}
-
-abstract class Food implements FoodInterface {
-    public void addSpicy(String amount) {
-        System.out.println("[Food] call addSpicy(), and the amount is " + amount + ".");
-    }
-
-    public void addCondiment(String material) {
-        System.out.println("[Food] call addCondiment(), and the material is " + material + ".");
-    }
-
-}
-
-class JapanNoodle extends Food {
-    @Override
-    public void addSpicy(String amount) {
-        System.out.println("[JapanNoodle] call addSpicy(), and the amount is " + amount);
-    }
-}
-
-class TaiwanChicken extends Food {
-    @Override
-    public void addCondiment(String material) {
-        System.out.println("[TaiwanChicken] call addCondiment(), and the material is " + material);
     }
 }
