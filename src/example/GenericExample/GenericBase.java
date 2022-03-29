@@ -10,6 +10,7 @@ import java.util.List;
  * Reference:
  *  - https://tw511.com/20/209/8135.html
  *  - https://www.youtube.com/watch?v=K1iu1kXkVoA
+ *  - https://www.cnblogs.com/jpfss/p/9928747.html
  */
 public class GenericBase {
     public static void main(String[] args) {
