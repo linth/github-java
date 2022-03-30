@@ -1,5 +1,7 @@
 package designPattern.Factory;
 
+import designPattern.Factory.food.Food;
+
 /**
  * 工廠模式 (Factory design pattern)
  * 
@@ -10,6 +12,63 @@ package designPattern.Factory;
  */
 public class Factory {
     public static void main(String[] args) {
-        
+
+        System.out.println("executing ChineseFoodFactory().");
+        ChineseFoodFactory chineseFoodFactory = new ChineseFoodFactory();
+        chineseFoodFactory.makeFood("A");
+        chineseFoodFactory.makeFood("B");
+
+        System.out.println("executing AmericanFoodFactory().");
+        AmericanFoodFactory americanFoodFactory = new AmericanFoodFactory();
+        americanFoodFactory.makeFood("A");
+        americanFoodFactory.makeFood("B");
     }
+}
+
+interface FoodFactory {
+    Food makeFood(String name);
+}
+
+class ChineseFoodFactory implements FoodFactory {
+
+    @Override
+    public Food makeFood(String name) {
+        if (name.equals("A")) {
+            return new ChineseFoodA();
+        } else if (name.equals("B")) {
+            return new ChineseFoodB();
+        } else {
+            return null;
+        }
+    }
+}
+
+class AmericanFoodFactory implements FoodFactory {
+
+    @Override
+    public Food makeFood(String name) {
+        if (name.equals("A")) {
+            return new AmericanFoodA();
+        } else if (name.equals("B")) {
+            return new AmericanFoodB();
+        } else {
+            return null;
+        }
+    }
+}
+
+class ChineseFoodA extends Food {
+
+}
+
+class ChineseFoodB extends Food {
+
+}
+
+class AmericanFoodA extends Food {
+
+}
+
+class AmericanFoodB extends Food {
+
 }
