@@ -11,22 +11,6 @@ public class HashtableExample {
         sampleHashmap();
     }
 
-    public static void sample() {
-        Map<String, Integer> table = new Hashtable<>();
-
-        table.put("george", 38);
-        table.put("amy", 22);
-        table.put("QQ", 9);
-        table.put("peter", 52);
-
-        table.forEach((k, v) -> {
-            // 虛歲 +1
-            // v = v+1;
-            // table.replace(k, v);
-            System.out.println("key: " + k + "; value: " + v);
-        });
-    }
-
     public static void sampleHashmap() {
         Map<Integer, String> s = new HashMap<>();
         s.put(1, "george");
@@ -46,5 +30,19 @@ public class HashtableExample {
             System.out.println("key: " + i + "; value: " + s.get(i));
         }
     }
-}
 
+    public static void sample() {
+        Map<String, Integer> table = new Hashtable<>();
+
+        table.put("george", 38);
+        table.put("amy", 22);
+        table.put("QQ", 9);
+        table.put("peter", 52);
+
+        table.forEach((k, v) -> {
+            v = v+1;
+            table.replace(k, v);
+            System.out.println("key: " + k + "; value: " + v);
+        });
+    }
+}
