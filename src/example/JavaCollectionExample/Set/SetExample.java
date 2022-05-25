@@ -1,4 +1,4 @@
-package example.JavaCollectionExample;
+package example.JavaCollectionExample.Set;
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -34,7 +34,7 @@ public class SetExample {
  *  - 串列資料較多時，效率會變差。
  */
 class HashSetExample {
-    void example() {
+    public void example() {
         HashSet<String> set = new HashSet<String>();
         set.add("George");
         set.add("May");
