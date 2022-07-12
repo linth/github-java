@@ -33,17 +33,10 @@ import designPattern.Factory.food.Food;
  * Reference:
  *  - https://www.javadoop.com/post/design-pattern
  */
-public class SimpleFactory {
-    public static void main(String[] args) {
-        // noodle.
-        FoodFactory.makeFood("noodle");
-        // chicken.
-        FoodFactory.makeFood("chicken");
-    }
-}
 
 class FoodFactory {
     public static Food makeFood(String name) {
+        
         if (name.equals("noodle")) {
             //! 使用 parent class or interface class 進行宣告，需要注意 "方法" 是否有包含在內。
             Food noodle = new JapanNoodle();
@@ -56,5 +49,15 @@ class FoodFactory {
         } else {
             return null;
         }
+    }
+}
+
+
+public class SimpleFactory {
+    public static void main(String[] args) {
+        // noodle.
+        FoodFactory.makeFood("noodle");
+        // chicken.
+        FoodFactory.makeFood("chicken");
     }
 }
