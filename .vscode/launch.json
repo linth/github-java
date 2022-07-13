@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch CustomData",
+            "request": "launch",
+            "mainClass": "example.DataTypeExample.CustomData",
+            "projectName": "github-java_a7d3d352"
+        },
+        {
+            "type": "java",
+            "name": "Launch BaseExample",
+            "request": "launch",
+            "mainClass": "example.DataTypeExample.BaseExample",
+            "projectName": "github-java_a7d3d352"
+        },
+        {
+            "type": "java",
+            "name": "Launch Consumer",
+            "request": "launch",
+            "mainClass": "JavaIO.Consumer",
+            "projectName": "github-java_a7d3d352"
+        },
+        {
+            "type": "java",
             "name": "Launch SuperConcept",
             "request": "launch",
             "mainClass": "example.ClassExample.SuperConcept",
