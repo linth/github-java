@@ -1,4 +1,4 @@
-package example.ClassExample;
+package class_ex;
 
 /**
  * 繼承 interface 範例

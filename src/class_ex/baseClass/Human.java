@@ -1,7 +1,7 @@
-package example.ClassExample.baseClass;
+package class_ex.baseClass;
 
-import example.ClassExample.interfaceObject.Animal;
-import example.ClassExample.interfaceObject.HumanCategory;
+import class_ex.interfaceObject.Animal;
+import class_ex.interfaceObject.HumanCategory;
 
 public abstract class Human implements Animal, HumanCategory {
     // ! 修改成多重繼承方式

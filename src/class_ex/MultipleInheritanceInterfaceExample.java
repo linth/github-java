@@ -1,4 +1,4 @@
-package example.ClassExample;
+package class_ex;
 
 public class MultipleInheritanceInterfaceExample {
     public static void main(String[] args) {

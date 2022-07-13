@@ -1,4 +1,4 @@
-package example.ClassExample;
+package class_ex;
 
 /**
  * 擴充 Object class，Object也是Java最高層級的類別。

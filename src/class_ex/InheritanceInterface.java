@@ -1,7 +1,7 @@
-package example.ClassExample;
+package class_ex;
 
-import example.ClassExample.baseClass.Man;
-import example.ClassExample.baseClass.Women;
+import class_ex.baseClass.Man;
+import class_ex.baseClass.Women;
 
 public class InheritanceInterface {
     public static void main(String[] args) {

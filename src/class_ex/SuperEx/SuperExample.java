@@ -1,6 +1,6 @@
-package example.ClassExample.SuperEx;
+package class_ex.SuperEx;
 
-import example.ClassExample.interfaceObject.Animal;
+import class_ex.interfaceObject.Animal;
 
 /**
  * 使用super()範例

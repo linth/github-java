@@ -1,4 +1,4 @@
-package example.ClassExample;
+package class_ex;
 
 /**
  *  三層架構：interface class, abstract class, concrete class.

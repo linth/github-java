@@ -1,4 +1,4 @@
-package example.ClassExample.interfaceObject;
+package class_ex.interfaceObject;
 
 /**
  * Interface class: HumanCategory

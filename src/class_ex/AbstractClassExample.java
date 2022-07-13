@@ -1,4 +1,4 @@
-package example.ClassExample;
+package class_ex;
 
 /**
  * abstract class 範例

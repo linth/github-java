@@ -1,4 +1,4 @@
-package example.ClassExample;
+package class_ex;
 
 /**
  * Hashcode: 主要是確認 object 是否為相同，需要搭配 equals。

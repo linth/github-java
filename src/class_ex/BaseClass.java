@@ -1,4 +1,4 @@
-package example.ClassExample;
+package class_ex;
 
 /**
  * Class 和 Object 物件

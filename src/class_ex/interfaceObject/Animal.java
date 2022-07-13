@@ -1,4 +1,4 @@
-package example.ClassExample.interfaceObject;
+package class_ex.interfaceObject;
 
 /**
  * 介面的繼承規則

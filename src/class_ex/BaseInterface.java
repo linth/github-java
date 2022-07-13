@@ -1,4 +1,4 @@
-package example.ClassExample;
+package class_ex;
 
 import java.util.logging.Logger;
 

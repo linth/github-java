@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch AbstractClassExample",
+            "request": "launch",
+            "mainClass": "class_ex.AbstractClassExample",
+            "projectName": "github-java_a7d3d352"
+        },
+        {
+            "type": "java",
+            "name": "Launch inner",
+            "request": "launch",
+            "mainClass": "class_ex.inner.inner",
+            "projectName": "github-java_a7d3d352"
+        },
+        {
+            "type": "java",
             "name": "Launch CustomData",
             "request": "launch",
             "mainClass": "example.DataTypeExample.CustomData",
