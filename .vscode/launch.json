@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch AutoCloseableDetails",
+            "request": "launch",
+            "mainClass": "example.ExceptionExample.exceptions.AutoCloseableDetails",
+            "projectName": "github-java_a7d3d352"
+        },
+        {
+            "type": "java",
+            "name": "Launch AlwaysFinally",
+            "request": "launch",
+            "mainClass": "example.ExceptionExample.exceptions.AlwaysFinally",
+            "projectName": "github-java_a7d3d352"
+        },
+        {
+            "type": "java",
+            "name": "Launch MultipleReturns",
+            "request": "launch",
+            "mainClass": "example.ExceptionExample.exceptions.MultipleReturns",
+            "projectName": "github-java_a7d3d352"
+        },
+        {
+            "type": "java",
             "name": "Launch AbstractClassExample",
             "request": "launch",
             "mainClass": "class_ex.AbstractClassExample",
