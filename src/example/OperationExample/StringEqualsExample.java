@@ -1,7 +1,5 @@
 package example.OperationExample;
 
-import designPattern.Template.sevenEleven.main;
-
 public class StringEqualsExample {
     
     public static void main(String[] args) {
