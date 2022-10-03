@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch StringEqualsExample",
+            "request": "launch",
+            "mainClass": "example.OperationExample.StringEqualsExample",
+            "projectName": "github-java_a7d3d352"
+        },
+        {
+            "type": "java",
             "name": "Launch AutoCloseableDetails",
             "request": "launch",
             "mainClass": "example.ExceptionExample.exceptions.AutoCloseableDetails",
