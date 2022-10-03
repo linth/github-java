@@ -1,6 +1,5 @@
 package example.ThreadExample.Concurrency;
 
-import designPattern.Template.sevenEleven.main;
 
 /**
  * 萬年經典 Concurrency Problem 不一致.
